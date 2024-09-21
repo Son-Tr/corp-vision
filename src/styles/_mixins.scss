@@ -1,0 +1,17 @@
+@mixin flex-center ($direction: row){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+
+
+
+// responsive
+
+@mixin responsive($breakpoint) {
+    @media (max-width: $breakpoint) {
+        @content;
+    }
+}
