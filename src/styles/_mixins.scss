@@ -1,16 +1,34 @@
-@mixin flex-center ($direction: row){
+// flex center 
+
+@mixin flex-center ($content: center, $align: center, $direction: row) {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: $content;
+    align-items: $align;
     flex-direction: $direction;
 }
 
+//  btn-style
+@mixin btn-style {
+    padding: 15px 50px;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 600;
+}
 
-
+//transition
+@mixin transition-ease-in {
+    transition: all 0.5s ease-in;
+}
 
 // responsive
 
-@mixin responsive($breakpoint) {
+@mixin responsive-min($breakpoint) {
+    @media (min-width: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin responsive-max($breakpoint) {
     @media (max-width: $breakpoint) {
         @content;
     }

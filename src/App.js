@@ -9,7 +9,7 @@ import ErrorPage from './pages/ErrorPage';
 
 function App() {
   return (
-    <div className="App">
+    <div >
       <Routes>
         <Route path='/' element={<Layout Component={Home} />} />
         <Route path='/about' element={<Layout Component={About} />} />

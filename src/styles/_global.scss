@@ -1,10 +1,44 @@
-.home{
-   @include flex-center;
+body {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-size: 1rem;
+   font-family: "Jost", sans-serif;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-    margin: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
+a:-webkit-any-link {
+   color: #000;
+   text-decoration: none;
+   display: block;
+
+   &:active {
+      color: #000;
+   }
+}
+
+.container {
+   width: 100%;
+   padding-right: 15px;
+   padding-left: 15px;
+   margin-right: auto;
+   margin-left: auto;
+
+   @include responsive-min(576px) {
+      max-width: 540px;
+   }
+
+   @include responsive-min(768px) {
+      max-width: 720px;
+   }
+
+   @include responsive-min(992px) {
+      max-width: 992px;
+   }
+
+   @include responsive-min(1200px) {
+      max-width: 1140px;
+   }
+
+}

@@ -1,0 +1,123 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+header {
+    padding: 20px 0;
+    @include flex-center(space-between, center, row);
+
+    .icon-logo {
+        color: var(--primary-color);
+        font-size: 2.2rem;
+        line-height: 2rem;
+        margin-right: 5px;
+    }
+
+    .logo {
+        // color: #fff;
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+
+    nav {
+        margin-left: 3rem;
+        font-weight: 500;
+        @include flex-center(center, center, row);
+        gap: 1.5rem;
+
+        .nav-link {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-color);
+            @include transition-ease-in;
+            text-transform: uppercase;
+            padding: 0.5rem 1rem;
+            position: relative;
+
+            &:hover {
+                color: var(--primary-color);
+                &::after {
+                    width: 100%;
+                }
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 2px;
+                width: 0;
+                background-color: var(--primary-color);
+                @include transition-ease-in;
+            }
+
+            &.active {
+                color: var(--primary-color);
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .bars-icon {
+        display: none;
+    }
+
+    //responsive
+
+    @include responsive-max(991px) {
+        .bars-icon {
+            display: block;
+            cursor: pointer;
+            padding: 0;
+            width: 2.5rem;
+            height: 2.5rem;
+            line-height: 2.5rem;
+            background: var(--primary-color);
+            border-radius: 4px;
+            text-align: center;
+            z-index: 1;
+        }
+
+        nav {
+            @include flex-center(flex-start, center, column);
+            position: absolute;
+            top: -100%;
+            right: 0;
+            width: 100%;
+            height: 0;
+            padding: 6rem 2rem;
+            background: rgba(0, 0, 0, 0.8); // Transparent background
+            border-radius: 0 0 8px 8px;
+            transition: all 0.5s ease-in-out;
+            opacity: 0;
+            overflow: hidden;
+
+            &.show {
+                top: 0;
+                height: 100%;
+                opacity: 1;
+                overflow-y: auto;
+            }
+
+            .nav-link {
+                width: 100%;
+                text-align: center;
+                padding: 1rem;
+                font-size: 1.5rem;
+                color: #fff;
+
+                &:hover {
+                    background-color: var(--primary-color);
+                    color: #fff;
+                }
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
+
+    }
+}

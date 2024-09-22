@@ -1,9 +1,10 @@
 import React from "react";
+import Header from "../components/Header/Header";
 
 function Layout({ Component }) {
     return (
         <>
-            Layout
+            <Header/>
             <Component />
             Layout
         </>
