@@ -56,10 +56,13 @@
 
                 &:hover {
                     color: var(--primary-color);
+                    opacity: 1;
                 }
 
                 &.active {
                     color: var(--primary-color);
+                    opacity: 1;
+
                 }
             }
         }
