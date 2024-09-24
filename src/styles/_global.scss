@@ -42,3 +42,29 @@ a:-webkit-any-link {
    }
 
 }
+
+.data-delay-8 {
+   --animate-delay: 0.8s;
+}
+
+.data-delay-1 {
+   --animate-delay: 0.5s;
+}
+
+.data-delay-10 {
+   --animate-delay: 1.5s;
+}
+
+.btn {
+   color: #fff;
+   background-color: #00a63f;
+   border: 1px solid transparent;
+   padding: 15px 50px;
+   font-size: 16px;
+   line-height: 18px;
+   font-weight: 600;
+   transition: 0.3s ease-in;
+   border-radius: var(--border-radius);
+   margin-top: 1.9rem;
+   z-index: 1;
+}
