@@ -19,7 +19,7 @@ function Header() {
         setIsMenu(!isMenu)
     }
     return (
-        <div>
+        <div className="nav-header">
             <header className="container">
                 <NavLink to="/">
                     <span className="icon-logo"><FontAwesomeIcon icon={faBarsStaggered} /></span>

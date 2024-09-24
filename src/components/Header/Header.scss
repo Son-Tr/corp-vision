@@ -1,106 +1,134 @@
 @import "../../styles/mixins";
 @import "../../styles/variables";
 
-header {
-    padding: 20px 0;
-    @include flex-center(space-between, center, row);
+.nav-header {
+    // style for handle scroll
+    @include flex-center(center, center, row);
+    padding: 0;
+    height: 100px;
+    border-bottom: 1px solid rgba(231, 231, 231, 0.18);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
 
-    .icon-logo {
-        color: var(--primary-color);
-        font-size: 2.2rem;
-        line-height: 2rem;
-        margin-right: 5px;
+    // style header 
+    &.nav-header-fixed{
+        width: 80px
     }
 
-    .logo {
-        // color: #fff;
-        font-size: 2.5rem;
-        font-weight: 700;
-    }
 
-    nav {
-        margin-left: 3rem;
-        font-weight: 500;
-        @include flex-center(center, center, row);
-        gap: 1.8rem;
 
-        .nav-link {
-            font-size: 1rem;
-            font-weight: 600;
-            color: var(--text-color);
-            @include transition-ease-in;
-            text-transform: uppercase;
-            padding: 0.5rem 1rem;
-            position: relative;
+    header {
+        @include flex-center(space-between, center, row);
+        padding: 20px 0;
 
-            &:hover {
-                color: var(--primary-color);
-            }
-
-            &.active {
-                color: var(--primary-color);
-            }
+        .icon-logo {
+            color: var(--primary-color);
+            font-size: 2rem;
+            line-height: 2rem;
+            margin-right: 5px;
         }
-    }
 
-    .bars-icon {
-        display: none;
-    }
-
-    //responsive
-
-    @include responsive-max(991px) {
-        .bars-icon {
-            display: block;
-            cursor: pointer;
-            padding: 0;
-            width: 2.5rem;
-            height: 2.5rem;
-            line-height: 2.5rem;
-            background: var(--primary-color);
-            border-radius: 4px;
-            text-align: center;
-            z-index: 1;
+        .logo {
+            color: #fff;
+            font-size: 2.5rem;
+            font-weight: 700;
         }
 
         nav {
-            @include flex-center(center, center, column);
-            position: absolute;
-            top: -100%;
-            right: 0;
-            width: 100%;
-            height: 0;
-            background: rgba(0, 0, 0, 0.8); // Transparent background
-            border-radius: 0 0 8px 8px;
-            transition: all 0.5s ease-in-out;
-            opacity: 0;
-            overflow: hidden;
-            gap: 1rem;
-
-            &.show {
-                top: 0;
-                opacity: 1;
-                overflow: hidden;
-                height: 420px;
-            }
+            margin-left: 3rem;
+            font-weight: 500;
+            @include flex-center(center, center, row);
+            gap: 1.8rem;
 
             .nav-link {
-                width: 100%;
-                text-align: center;
-                padding: 1rem;
                 font-size: 1rem;
+                font-weight: 600;
+                color: var(--text-color);
+                @include transition-ease-in;
+                text-transform: uppercase;
+                padding: 0.5rem 1rem;
+                position: relative;
                 color: #fff;
+                opacity: 0.8;
 
                 &:hover {
-                    background-color: var(--primary-color);
-                    color: #fff;
+                    color: var(--primary-color);
                 }
 
-                &::after {
-                    display: none;
+                &.active {
+                    color: var(--primary-color);
                 }
             }
         }
 
+        .bars-icon {
+            display: none;
+        }
+
+
+
+
+
+        //responsive
+
+        @include responsive-max(991px) {
+            .bars-icon {
+                display: block;
+                cursor: pointer;
+                padding: 0;
+                width: 2.5rem;
+                height: 2.5rem;
+                line-height: 2.5rem;
+                background: var(--primary-color);
+                border-radius: 4px;
+                text-align: center;
+                z-index: 2;
+            }
+
+            nav {
+                @include flex-center(center, center, column);
+                position: absolute;
+                top: -100%;
+                right: 0;
+                width: 100%;
+                height: 0;
+                background: rgba(0, 0, 0, 0.8); // Transparent background
+                border-radius: 0 0 8px 8px;
+                transition: all 0.5s ease-in-out;
+                opacity: 0;
+                overflow: hidden;
+                gap: 1rem;
+
+                &.show {
+                    top: 0;
+                    opacity: 1;
+                    overflow: hidden;
+                    height: 420px;
+                    z-index: 2;
+                }
+
+                .nav-link {
+                    width: 100%;
+                    text-align: center;
+                    padding: 1rem;
+                    font-size: 1rem;
+                    color: #fff;
+
+                    &:hover {
+                        background-color: var(--primary-color);
+                        color: #fff;
+                    }
+
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+
+        }
     }
+
 }
