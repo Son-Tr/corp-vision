@@ -20,10 +20,8 @@ a:-webkit-any-link {
 
 .container {
    width: 100%;
-   padding-right: 15px;
-   padding-left: 15px;
-   margin-right: auto;
-   margin-left: auto;
+   @include padding(0, 15, 0, 15);
+   @include margin(0, auto, 0, auto);
 
    @include responsive-min(576px) {
       max-width: 540px;
@@ -43,28 +41,39 @@ a:-webkit-any-link {
 
 }
 
-.data-delay-8 {
-   --animate-delay: 0.8s;
-}
-
-.data-delay-1 {
-   --animate-delay: 0.5s;
-}
-
-.data-delay-10 {
-   --animate-delay: 1.5s;
-}
 
 .btn {
    color: #fff;
    background-color: #00a63f;
    border: 1px solid transparent;
-   padding: 15px 50px;
-   font-size: 16px;
-   line-height: 18px;
+   font-size: 1rem;
    font-weight: 600;
    transition: 0.3s ease-in;
    border-radius: var(--border-radius);
-   margin-top: 1.9rem;
    z-index: 1;
+
+   @include padding(15, 50, 15, 50);
+   @include line-height(18);
+   @include margin(30, 0, 0, 0)
+}
+
+.title-small {
+   font-weight: 600;
+   letter-spacing: 1px;
+   color: #7e7d7d;
+   @include font-size(14);
+   @include line-height(30);
+}
+
+.title-big {
+   font-weight: 700;
+   color: var(--heading-color);
+   @include font-size(34);
+   @include line-height(45);
+}
+
+.h4-content {
+   font-size: 1.5rem;
+   color: var(--heading-color);
+
 }

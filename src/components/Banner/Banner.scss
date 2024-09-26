@@ -29,10 +29,10 @@
             font-size: 1.25rem;
             z-index: 1;
             max-width: 600px;
-            line-height: 30px;
             color: #fff;
             opacity: .9;
             margin: 1.4rem 0 0;
+            @include line-height(30)
 
         }
 

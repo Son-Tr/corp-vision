@@ -9,10 +9,11 @@
 
 //  btn-style
 @mixin btn-style {
-    padding: 15px 50px;
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 1rem;
     font-weight: 600;
+
+    @include line-height(18);
+    @include padding(15, 50, 15, 50)
 }
 
 //transition
@@ -32,4 +33,26 @@
     @media (max-width: $breakpoint) {
         @content;
     }
+}
+
+@mixin line-height($value) {
+    line-height: calc(($value/16)*1rem);
+}
+
+@mixin font-size($value) {
+    font-size: calc(($value/16)*1rem);
+}
+
+@mixin margin($top, $right, $bottom, $left) {
+    margin-top: if(type-of($top)=="number", calc(($top / 16) * 1rem), $top);
+    margin-right: if(type-of($right)=="number", calc(($right / 16) * 1rem), $right);
+    margin-bottom: if(type-of($bottom)=="number", calc(($bottom / 16) * 1rem), $bottom);
+    margin-left: if(type-of($left)=="number", calc(($left / 16) * 1rem), $left);
+}
+
+@mixin padding($top, $right, $bottom, $left) {
+    padding-top: if(type-of($top)=="number", calc(($top / 16) * 1rem), $top);
+    padding-right: if(type-of($right)=="number", calc(($right / 16) * 1rem), $right);
+    padding-bottom: if(type-of($bottom)=="number", calc(($bottom / 16) * 1rem), $bottom);
+    padding-left: if(type-of($left)=="number", calc(($left / 16) * 1rem), $left);
 }
