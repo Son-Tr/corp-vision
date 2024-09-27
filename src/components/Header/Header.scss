@@ -1,9 +1,11 @@
 @import "../../styles/mixins";
 @import "../../styles/variables";
 
+
 .nav-header {
     // style for handle scroll
     @include flex-center(center, center, row);
+    @include transition-ease-in;
     padding: 0;
     height: 100px;
     border-bottom: 1px solid rgba(231, 231, 231, 0.18);
@@ -15,7 +17,25 @@
 
     // style header 
     &.nav-header-fixed {
-        width: 80px
+        height: 80px;
+        background-color: var(--bg-color);
+        border-bottom: none;
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05);
+
+        .logo {
+            color: var(--heading-color);
+        }
+
+        .nav-link {
+            color: var(--heading-color);
+            opacity: 0.7;
+
+        }
+
+        .light-dark-btn{
+            color: var(--heading-color);
+            opacity: 0.7;
+        }
     }
 
 
@@ -35,26 +55,30 @@
         .logo {
             color: #fff;
             font-weight: 700;
-
+            @include transition-ease-in;
             @include font-size(32);
         }
 
+       
+
+        // nav
         nav {
-            margin-left: 3rem;
+            margin-right: 3rem;
             font-weight: 500;
             @include flex-center(center, center, row);
             gap: 1.8rem;
 
+        
             .nav-link {
                 font-size: 1rem;
                 font-weight: 600;
                 color: var(--text-color);
-                @include transition-ease-in;
                 text-transform: uppercase;
                 padding: 0.5rem 1rem;
                 position: relative;
                 color: #fff;
                 opacity: 0.8;
+                @include transition-ease-in;
 
                 &:hover {
                     color: var(--primary-color);
@@ -67,6 +91,25 @@
 
                 }
             }
+
+            // light and dark btn
+            .light-dark-btn{
+                // display: inline-block;
+                width: 24px;
+                height: 24px;
+                color: #fff;
+                opacity: 0.8;
+                cursor: pointer;
+                @include font-size(24);
+                @include line-height(24);
+                @include padding(1,1,1,1);
+                @include transition-ease-in;
+            }
+            .light-dark-btn:hover{
+                color: var(--primary-color);
+                    opacity: 1;
+            }
+
         }
 
         .bars-icon {

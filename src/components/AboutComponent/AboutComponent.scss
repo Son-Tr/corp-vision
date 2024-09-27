@@ -65,3 +65,11 @@
         }
     }
 }
+
+// responsive
+
+@include responsive-min(992px) {
+    .box-content{
+        padding: 3rem 1rem !important;
+    }
+ }
