@@ -1,6 +1,6 @@
 // flex center 
 
-@mixin flex-center ($content: center, $align: center, $direction: row) {
+@mixin flex-center ($content, $align, $direction) {
     display: flex;
     justify-content: $content;
     align-items: $align;

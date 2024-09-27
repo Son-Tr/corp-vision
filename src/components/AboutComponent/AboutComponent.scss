@@ -1,2 +1,67 @@
 @import "../../styles/mixins";
 @import "../../styles/variables";
+
+
+#about {
+    @include padding(48, 0, 48, 0);
+
+    .container {
+        @include padding(48, 15, 24, 15);
+
+        //flex-about
+        .flex-about {
+            @include flex-center(center, flex-start, row);
+
+            // about-img part
+            .about-img {
+                flex: 1;
+                padding: 0 1rem;
+
+            }
+
+            // about-content part
+            .about-content {
+                flex: 1;
+                padding: 0 1rem;
+
+                .title-small {
+                    margin: 0 0 0.25rem 0;
+                }
+
+                .h4-content {
+                    margin-top: 1.5rem;
+                }
+
+                .p-content {
+                    margin-top: 1.5rem;
+                }
+            }
+
+        }
+
+        //list-feature
+        .list-feature {
+            margin-top: 3rem;
+            padding-top: 3rem;
+            @include flex-center(center, center, row);
+
+            .box {
+                @include padding(0, 15, 0, 15);
+
+                .box-content {
+                    border-radius: 8px;
+                    background-color: var(--bg-lightgrey);
+                    @include padding(50, 35, 50, 35);
+                    @include flex-center(center,flex-start, row);
+                    gap: 20px;
+
+                    .icon-left{
+                        width: 40px;
+                        color: var(--primary-color);
+                        @include font-size(38);
+                    }
+                }
+            }
+        }
+    }
+}
