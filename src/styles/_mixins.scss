@@ -1,10 +1,18 @@
-// flex center 
+// flex  
 
-@mixin flex-center ($content, $align, $direction) {
+@mixin flex ($content, $align, $direction) {
     display: flex;
     justify-content: $content;
     align-items: $align;
     flex-direction: $direction;
+}
+// grid
+
+@mixin grid($column, $size){
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat($column,$size) 
+    
 }
 
 //  btn-style

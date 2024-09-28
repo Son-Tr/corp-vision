@@ -10,7 +10,7 @@
 
         //flex-about
         .flex-about {
-            @include flex-center(center, flex-start, row);
+            @include flex(center, flex-start, row);
 
             // about-img part
             .about-img {
@@ -43,23 +43,36 @@
         .list-feature {
             margin-top: 3rem;
             padding-top: 3rem;
-            @include flex-center(center, center, row);
+            gap: 30px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: center;
+            @include padding(0, 15, 0, 15);
 
-            .box {
-                @include padding(0, 15, 0, 15);
 
-                .box-content {
-                    border-radius: 8px;
-                    background-color: var(--bg-lightgrey);
-                    @include padding(50, 35, 50, 35);
-                    @include flex-center(center,flex-start, row);
-                    gap: 20px;
+            .box-content {
+                border-radius: 8px;
+                background-color: var(--bg-lightgrey);
+                box-shadow: var(--box-shadow);
+                @include padding(50, 35, 50, 35);
+                @include flex(center, flex-start, row);
+                gap: 20px;
 
-                    .icon-left{
-                        width: 40px;
-                        color: var(--primary-color);
-                        @include font-size(38);
+                .icon-left {
+                    width: 40px;
+                    color: var(--primary-color);
+                    @include font-size(38);
+                }
+
+                .content-right {
+                    .p-title {
+                        margin-bottom: 1rem;
                     }
+                }
+
+                // resposive
+                @include responsive-min(992px) {
+                    padding: 3rem 1rem;
                 }
             }
         }
@@ -68,8 +81,8 @@
 
 // responsive
 
-@include responsive-min(992px) {
-    .box-content{
-        padding: 3rem 1rem !important;
-    }
- }
+// @include responsive-min(768px) {
+//     .list-feature{
+//         @include grid(2, 1fr)!;
+//     }
+//  }

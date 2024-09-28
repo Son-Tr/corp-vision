@@ -9,10 +9,10 @@
     background-size: cover;
     position: relative;
 
-    @include flex-center(center, center, row);
+    @include flex(center, center, row);
 
     .container {
-        @include flex-center(center, flex-start, column);
+        @include flex(center, flex-start, column);
 
         .banner-title {
             font-size: 4.1rem;

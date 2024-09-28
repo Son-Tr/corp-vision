@@ -30,51 +30,51 @@ function AboutComponent() {
                     </div>
                 </div>
                 <div className="list-feature">
-                    <div className="box">
-                        <div className="box-content">
-                            <div className="icon-left">
+
+                    <div className="box-content">
+                        <div className="icon-left">
                             <FontAwesomeIcon icon={faObjectGroup} />
-                            </div>
-                            <div className="content-right">
-                                <p className="p-title">
-                                    Perfect Design
-                                </p>
-                                <p className="p-content">
+                        </div>
+                        <div className="content-right">
+                            <p className="p-title">
+                                Perfect Design
+                            </p>
+                            <p className="p-content">
                                 Crafted with precision, every element falls into place effortlessly.
-                                </p>
-                            </div>
+                            </p>
                         </div>
                     </div>
-                    <div className="box">
-                        <div className="box-content">
-                            <div className="icon-left">
+
+
+                    <div className="box-content">
+                        <div className="icon-left">
                             <FontAwesomeIcon icon={faThumbsUp} />
-                            </div>
-                            <div className="content-right">
-                                <p className="p-title">
-                                    Carefully Planned
-                                </p>
-                                <p className="p-content">
+                        </div>
+                        <div className="content-right">
+                            <p className="p-title">
+                                Carefully Planned
+                            </p>
+                            <p className="p-content">
                                 Every detail is thoughtfully considered, ensuring a solid foundation for success.
-                                </p>
-                            </div>
+                            </p>
                         </div>
                     </div>
-                    <div className="box">
-                        <div className="box-content">
-                            <div className="icon-left">
+
+
+                    <div className="box-content">
+                        <div className="icon-left">
                             <FontAwesomeIcon icon={faLightbulb} />
-                            </div>
-                            <div className="content-right">
-                                <p className="p-title">
-                                    Smartly Execute
-                                </p>
-                                <p className="p-content">
+                        </div>
+                        <div className="content-right">
+                            <p className="p-title">
+                                Smartly Execute
+                            </p>
+                            <p className="p-content">
                                 Actions are taken with precision, transforming plans into effective results.
-                                </p>
-                            </div>
+                            </p>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>

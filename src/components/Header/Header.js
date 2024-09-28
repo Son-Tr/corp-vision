@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import "./Header.scss"
-import { faBars, faBarsStaggered, faMoon } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faBarsStaggered, faMoon, faX } from "@fortawesome/free-solid-svg-icons";
 
 
 
@@ -28,10 +28,18 @@ function Header() {
         return () => {
             window.removeEventListener("scroll", handleScroll);
         }
-    }, [window.scrollY])
+    }, [])
 
     const toggleMenu = () => {
-        setIsMenu(!isMenu)
+        if(isMenu){
+            document.querySelector(".nav-header").classList.remove("bg-show-menu");
+            setIsMenu(!isMenu);
+            return;
+        }else{
+            document.querySelector(".nav-header").classList.add("bg-show-menu");
+            setIsMenu(!isMenu)
+            return;
+        }
     }
     return (
         <div className="nav-header">
@@ -50,7 +58,7 @@ function Header() {
                     </span>
                 </nav>
                 <span className="bars-icon" onClick={toggleMenu}>
-                    <FontAwesomeIcon icon={faBars} />
+                 {!isMenu?<FontAwesomeIcon icon={faBars} /> : <FontAwesomeIcon icon={faX} />}   
                 </span>
             </header>
         </div>
