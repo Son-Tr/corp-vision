@@ -11,7 +11,7 @@
 
         //responsive
         @include responsive-max(576px) {
-            padding: 2rem 1rem;
+            padding: 2rem 0.5rem;
         }
 
         //flex-about
@@ -130,6 +130,7 @@
                             right: 22px;
                             bottom: -30rem;
                         }
+
                         @include responsive-max(500px) {
                             bottom: -25rem;
                         }
@@ -193,21 +194,12 @@
 
                 @include responsive-max(500px) {
                     margin-top: 3.5rem;
-
+                    padding: 0;
                 }
 
 
                 .title-small {
                     margin: 0 0 0.25rem 0;
-                }
-
-                .title-big {
-
-                    //responsive
-                    @include responsive-max(415px) {
-                        font-size: 1.8rem;
-                        line-height: 1.8rem;
-                    }
                 }
 
                 .h4-content {
