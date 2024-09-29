@@ -57,6 +57,9 @@ img {
    @include responsive-max(768px) {
       max-width: 95%;
    }
+   @include responsive-max(576px) {
+      max-width: 90%;
+   }
 
 }
 

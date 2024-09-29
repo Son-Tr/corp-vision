@@ -11,6 +11,26 @@
 
     @include flex(center, center, row);
 
+    //responsive
+    @include responsive-max(991px) {
+        min-height: 700px;
+    }
+
+    @include responsive-max(768px) {
+        min-height: 650px;
+        @include padding(0, 0, 40, 0);
+    }
+
+    @include responsive-max(576px) {
+        min-height: 600px;
+        padding: 0;
+    }
+
+    @include responsive-max(480px) {
+        min-height: 580px;
+    }
+
+
     .container {
         @include flex(center, flex-start, column);
 
@@ -22,7 +42,27 @@
             max-width: 800px;
             z-index: 1;
 
-            
+            //responsive
+            @include responsive-max(1280px) {
+                @include font-size(55);
+            }
+
+            @include responsive-max(991px) {
+                @include font-size(50);
+            }
+
+            @include responsive-max(768px) {
+                @include font-size(45);
+            }
+
+            @include responsive-max(576px) {
+                @include font-size(40);
+            }
+
+            @include responsive-max(480px) {
+                @include font-size(36);
+            }
+
         }
 
         .banner-content {
@@ -32,7 +72,21 @@
             color: #fff;
             opacity: .9;
             margin: 1.4rem 0 0;
-            @include line-height(30)
+            @include line-height(30);
+
+            //responsive
+            @include responsive-max(768px) {
+                @include font-size(18);
+                @include line-height(28)
+            }
+
+            @include responsive-max(576px) {
+                font-size: 1.1rem;
+            }
+
+            @include responsive-max(415px) {
+                font-size: 1rem;
+            }
 
         }
 

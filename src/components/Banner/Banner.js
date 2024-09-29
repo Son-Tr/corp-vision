@@ -24,11 +24,11 @@ function Banner() {
                 spaceBetween={30}
                 effect={"fade"}
                 navigation={true}
-                autoplay={{
-                    delay: 4000,
-                    disableOnInteraction: false,
-                }}
-                modules={[EffectFade, Navigation,Autoplay]}
+                // autoplay={{
+                //     delay: 4000,
+                //     disableOnInteraction: false,
+                // }}
+                modules={[EffectFade, Navigation]}
                 className="mySwiper"
                 onSlideChange={(slide)=>setActiveSlide(slide.activeIndex)}// track slide change.
             >

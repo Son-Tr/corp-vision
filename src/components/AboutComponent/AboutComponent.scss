@@ -9,6 +9,11 @@
     .container {
         @include padding(48, 15, 24, 15);
 
+        //responsive
+        @include responsive-max(576px) {
+            padding: 2rem 1rem;
+        }
+
         //flex-about
         .flex-about {
             @include flex(center, flex-start, row);
@@ -18,7 +23,7 @@
             @include responsive-max(992px) {
                 @include grid-row(2, 1fr);
             }
-            
+
             @include responsive-max(500px) {
                 @include grid-row(3, 1fr);
             }
@@ -37,7 +42,7 @@
                 @include responsive-max(500px) {
                     grid-row: 1/2;
                 }
-                
+
 
 
                 .about-img {
@@ -51,7 +56,7 @@
                         position: absolute;
 
                         @include responsive-max(576px) {
-                            width: 90%;
+                            width: 100%;
                         }
 
                     }
@@ -80,8 +85,9 @@
                         @include responsive-max(576px) {
                             width: 450px;
                             height: 450px;
-                          
+
                         }
+
                         @include responsive-max(500px) {
                             width: 380px;
                             height: 380px;
@@ -93,6 +99,7 @@
                             height: 320px;
                             top: -10px;
                         }
+
                         @include responsive-max(376px) {
                             width: 300px;
                             height: 300px;
@@ -121,7 +128,14 @@
                             min-height: 120px;
                             padding: 1rem;
                             right: 22px;
+                            bottom: -30rem;
+                        }
+                        @include responsive-max(500px) {
                             bottom: -25rem;
+                        }
+
+                        @include responsive-max(415px) {
+                            bottom: -20rem;
                         }
 
                         .img-info-content {
@@ -173,8 +187,13 @@
                 }
 
                 @include responsive-max(576px) {
-                    margin-top: 4rem;
+                    margin-top: 0rem;
                     grid-row: 2/4;
+                }
+
+                @include responsive-max(500px) {
+                    margin-top: 3.5rem;
+
                 }
 
 
