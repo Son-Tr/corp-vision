@@ -6,8 +6,8 @@
    font-family: "Jost", sans-serif;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
-
-   @include transition-ease-in-out;
+   transition: background-color 0.8s ease-in-out;
+   // @include transition-ease-in-out;
 }
 
 // remove css default

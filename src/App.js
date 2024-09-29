@@ -6,7 +6,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Services from './pages/Services';
 import ErrorPage from './pages/ErrorPage';
-import Ex from './ex/Ex';
+
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
         <Route path='/contact' element={<Layout Component={Contact} />} />
         <Route path='/services' element={<Layout Component={Services} />} />
         <Route path='*' element={<Layout Component={ErrorPage} />} />
-        <Route path='/ex' element={<Layout Component={Ex} />} />
+        
 
       </Routes>
     </>
