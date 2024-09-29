@@ -8,6 +8,7 @@
 }
 
 .nav-header {
+
     &.bg-show-menu {
         background: rgba(0, 0, 0, 0.85);
         border-bottom: none;
@@ -25,6 +26,7 @@
     width: 100%;
     z-index: 2;
 
+    
     // style header when scroll
     &.nav-header-fixed {
         height: 80px;
@@ -33,13 +35,14 @@
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05);
 
         .container {
-            .nav-link-logo{
+            .nav-link-logo {
                 text-decoration: none;
+
                 .logo {
                     color: var(--heading-color);
                 }
             }
-           
+
 
             .nav-link {
                 color: var(--heading-color);

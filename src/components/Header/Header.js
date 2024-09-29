@@ -36,7 +36,7 @@ function Header() {
 
     useEffect(() => {
         let localTheme = localStorage.getItem("theme");
-        
+
         if (localTheme) {
             setDarkTheme(localTheme === "dark"); // Simplified: No need for ternary operator
             document.documentElement.setAttribute("data-theme", localTheme);
@@ -49,7 +49,7 @@ function Header() {
             localStorage.setItem("theme", defaultTheme);
         }
     }, []);
-    
+
 
 
 
