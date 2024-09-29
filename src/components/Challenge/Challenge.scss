@@ -22,6 +22,7 @@
             //responsive
             @include responsive-max(992px) {
                 width: 100%;
+                padding-right: 0;
             }
 
             .title-big {
