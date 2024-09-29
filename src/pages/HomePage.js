@@ -2,7 +2,7 @@ import React from 'react'
 import Banner from '../components/Banner/Banner'
 import AboutComponent from '../components/AboutComponent/AboutComponent'
 
-const Home = () => {
+const HomePage = () => {
   return (
     <div className=''>
       <Banner/>
@@ -11,4 +11,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default HomePage

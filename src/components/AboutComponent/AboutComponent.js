@@ -10,8 +10,23 @@ function AboutComponent() {
         <div id="about">
             <div className="container">
                 <div className="flex-about">
-                    <div className="about-img">
-                        <img src={about2} alt="about2" />
+                    <div className="about-img-part">
+                        <div className="about-img">
+                            <img src={about2} alt="about2" />
+                            <div className="bg-shape"></div>
+                            <div className="img-info-box">
+                                <div className="img-info-content">
+                                    <p className="img-info-title">
+                                        25+
+                                    </p>
+                                    <p className="img-info-detail">
+                                        Years of
+                                        <br />
+                                        Experience.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div className="about-content">
                         <h5 className="title-small">

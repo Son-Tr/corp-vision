@@ -8,11 +8,16 @@
 }
 // grid
 
-@mixin grid($column, $size){
+@mixin grid-column($column, $size){
     display: grid;
     justify-content: center;
     grid-template-columns: repeat($column,$size) 
-    
+}
+
+@mixin grid-row($column, $size){
+    display: grid;
+   
+    grid-template-rows: repeat($column,$size) 
 }
 
 //  btn-style

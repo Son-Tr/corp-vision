@@ -1,10 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
 import './styles/main.scss';
-import Home from './pages/Home';
+import HomePage from './pages/HomePage';
 import Layout from './layout/layout';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import Services from './pages/Services';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
+import ServicesPage from './pages/ServicesPage';
 import ErrorPage from './pages/ErrorPage';
 
 
@@ -12,13 +12,12 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path='/' element={<Layout Component={Home} />} />
-        <Route path='/about' element={<Layout Component={About} />} />
-        <Route path='/contact' element={<Layout Component={Contact} />} />
-        <Route path='/services' element={<Layout Component={Services} />} />
+        <Route path='/' element={<Layout Component={HomePage} />} />
+        <Route path='/about' element={<Layout Component={AboutPage} />} />
+        <Route path='/contact' element={<Layout Component={ContactPage} />} />
+        <Route path='/services' element={<Layout Component={ServicesPage} />} />
         <Route path='*' element={<Layout Component={ErrorPage} />} />
         
-
       </Routes>
     </>
   );

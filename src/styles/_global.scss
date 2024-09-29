@@ -15,7 +15,8 @@ h1,
 h2,
 h3,
 h4,
-h5, p {
+h5,
+p {
    padding: 0;
    margin: 0;
    font-weight: normal;
@@ -40,24 +41,21 @@ img {
 //reponsive for container
 .container {
    width: 100%;
+   max-width: 1100px;
    @include padding(0, 15, 0, 15);
    @include margin(0, auto, 0, auto);
 
-   @include responsive-min(576px) {
-      max-width: 540px;
-   }
-
-   @include responsive-min(768px) {
-      max-width: 720px;
-   }
-
-   @include responsive-min(992px) {
+   @include responsive-max(1200px) {
       max-width: 900px;
       padding: 0;
    }
 
-   @include responsive-min(1200px) {
-      max-width: 1100px;
+   @include responsive-max(993px) {
+      max-width: 720px;
+   }
+
+   @include responsive-max(768px) {
+      max-width: 95%;
    }
 
 }
@@ -108,17 +106,17 @@ img {
 
 }
 
-.p-title{
+.p-title {
    display: block;
-    color: var(--heading-color);
-    font-weight: 600;
-    line-height: 1.2rem;
-    cursor: pointer;
-    @include font-size(22);
-    @include transition-ease-in;
+   color: var(--heading-color);
+   font-weight: 600;
+   line-height: 1.2rem;
+   cursor: pointer;
+   @include font-size(22);
+   @include transition-ease-in;
 }
 
-.p-title:hover{
+.p-title:hover {
    color: var(--primary-color);
 }
 

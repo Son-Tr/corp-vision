@@ -12,12 +12,154 @@
         //flex-about
         .flex-about {
             @include flex(center, flex-start, row);
+            gap: 2rem;
+
+            //responsive
+            @include responsive-max(992px) {
+                @include grid-row(2, 1fr);
+            }
+            
+            @include responsive-max(500px) {
+                @include grid-row(3, 1fr);
+            }
 
             // about-img part
-            .about-img {
-                flex: 1;
-                padding: 0 1rem;
+            .about-img-part {
+                position: relative;
+                flex: 0 0 50%;
+                max-width: 50%;
 
+                //responsive
+                @include responsive-max(992px) {
+                    max-width: 100%;
+                }
+
+                @include responsive-max(500px) {
+                    grid-row: 1/2;
+                }
+                
+
+
+                .about-img {
+                    position: relative;
+                    width: 100%;
+
+                    img {
+                        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+                        box-shadow: 0 15px 38px 0 rgba(0, 0, 0, 0.2);
+                        z-index: 1;
+                        position: absolute;
+
+                        @include responsive-max(576px) {
+                            width: 90%;
+                        }
+
+                    }
+
+                    .bg-shape {
+                        border-radius: 25% 70% 84% 22% / 42% 75% 25% 75%;
+                        box-shadow: 0 15px 38px 0 rgba(0, 0, 0, 0.2);
+                        width: 500px;
+                        height: 500px;
+                        background: var(--primary-color);
+                        opacity: .4;
+                        position: absolute;
+                        top: 0;
+
+                        // responsive
+                        @include responsive-max(1200px) {
+                            width: 450px;
+                            height: 450px;
+                        }
+
+                        @include responsive-max(992px) {
+                            width: 500px;
+                            height: 500px;
+                        }
+
+                        @include responsive-max(576px) {
+                            width: 450px;
+                            height: 450px;
+                          
+                        }
+                        @include responsive-max(500px) {
+                            width: 380px;
+                            height: 380px;
+                            top: -22px;
+                        }
+
+                        @include responsive-max(415px) {
+                            width: 320px;
+                            height: 320px;
+                            top: -10px;
+                        }
+                        @include responsive-max(376px) {
+                            width: 300px;
+                            height: 300px;
+                            top: -10px;
+                        }
+                    }
+
+                    .img-info-box {
+                        position: absolute;
+                        right: 36px;
+                        bottom: -31rem;
+                        text-align: center;
+                        background-color: var(--primary-color);
+                        color: #fff;
+                        @include padding(35, 35, 35, 35);
+                        box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.2);
+                        min-width: 200px;
+                        min-height: 200px;
+                        transform: rotate(45deg);
+                        z-index: 1;
+                        border-radius: var(--border-radius);
+
+                        //responsive
+                        @include responsive-max(576px) {
+                            min-width: 120px;
+                            min-height: 120px;
+                            padding: 1rem;
+                            right: 22px;
+                            bottom: -25rem;
+                        }
+
+                        .img-info-content {
+                            transform: rotate(-45deg);
+
+                            .img-info-title {
+                                color: #fff;
+                                font-weight: 600;
+                                margin: 0;
+                                @include font-size(40);
+                                @include line-height(40);
+                                @include padding(0, 0, 10, 0);
+                                text-align: center;
+
+                                //responsive
+                                @include responsive-max(576px) {
+                                    line-height: 1.8rem;
+                                    font-size: 1.8rem;
+                                }
+                            }
+
+                            .img-info-detail {
+                                color: #fff;
+                                opacity: 0.8;
+                                @include font-size(24);
+                                @include line-height(28);
+
+                                //responsive
+                                @include responsive-max(576px) {
+                                    font-size: 1rem;
+                                    line-height: 1rem;
+
+                                }
+                            }
+                        }
+
+                    }
+                }
             }
 
             // about-content part
@@ -25,16 +167,48 @@
                 flex: 1;
                 padding: 0 1rem;
 
+                // responsive
+                @include responsive-max(992px) {
+                    margin-top: 3rem;
+                }
+
+                @include responsive-max(576px) {
+                    margin-top: 4rem;
+                    grid-row: 2/4;
+                }
+
+
                 .title-small {
                     margin: 0 0 0.25rem 0;
                 }
 
+                .title-big {
+
+                    //responsive
+                    @include responsive-max(415px) {
+                        font-size: 1.8rem;
+                        line-height: 1.8rem;
+                    }
+                }
+
                 .h4-content {
                     margin-top: 1.5rem;
+
+                    //responsive
+                    @include responsive-max(415px) {
+                        font-size: 1.3rem;
+                        line-height: 1.3rem;
+                    }
                 }
 
                 .p-content {
                     margin-top: 1.5rem;
+
+                    //responsive
+                    @include responsive-max(415px) {
+                        font-size: 1rem;
+                        line-height: 1.2rem;
+                    }
                 }
             }
 
@@ -45,10 +219,19 @@
             margin-top: 3rem;
             padding-top: 3rem;
             gap: 30px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            justify-content: center;
+            @include grid-column(3, 1fr);
             @include padding(0, 15, 0, 15);
+
+            //resonsive
+            @include responsive-max(992px) {
+                @include grid-column(2, 1fr);
+            }
+
+            @include responsive-max(768px) {
+                @include grid-column(1, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+            }
+
 
 
             .box-content {
@@ -59,10 +242,32 @@
                 @include flex(center, flex-start, row);
                 gap: 20px;
 
+                //resonsive 
+                @include responsive-max(415px) {
+                    padding: 1.5rem .8rem;
+                }
+
+                &:last-child {
+                    @include responsive-max(992px) {
+                        grid-column: span 2;
+                        justify-content: center;
+                    }
+
+                    @include responsive-max(768px) {
+                        grid-column: 1/2;
+                        justify-content: center;
+                    }
+
+                }
+
                 .icon-left {
-                    width: 40px;
                     color: var(--primary-color);
-                    @include font-size(38);
+
+                    svg {
+                        width: 40px;
+                        height: 40px;
+                    }
+
                 }
 
                 .content-right {
@@ -79,11 +284,3 @@
         }
     }
 }
-
-// responsive
-
-// @include responsive-min(768px) {
-//     .list-feature{
-//         @include grid(2, 1fr)!;
-//     }
-//  }
