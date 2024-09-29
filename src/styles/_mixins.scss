@@ -29,6 +29,10 @@
     transition: all 0.3s ease-in;
 }
 
+@mixin transition-ease-in-out{
+    transition: all 0.8s ease-in-out;
+}
+
 // responsive
 
 @mixin responsive-min($breakpoint) {

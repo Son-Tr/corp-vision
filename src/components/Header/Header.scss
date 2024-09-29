@@ -1,15 +1,21 @@
 @import "../../styles/mixins";
 @import "../../styles/variables";
 
+// display body scroll which navbar is in active;
+.noscroll {
+    overflow: hidden;
+    height: 100vh;
+}
 
 .nav-header {
-    &.bg-show-menu{
+    &.bg-show-menu {
         background: rgba(0, 0, 0, 0.85);
-        border-bottom:none;
+        border-bottom: none;
     }
+
     // style for handle scroll
     @include flex(center, center, row);
-    @include transition-ease-in;
+    @include transition-ease-in-out;
     padding: 0;
     height: 100px;
     border-bottom: 1px solid rgba(231, 231, 231, 0.18);
@@ -42,7 +48,28 @@
                 color: var(--heading-color);
                 opacity: 0.7;
             }
+
+            //responsive and change css when user scroll 
+            @include responsive-max(991px) {
+                nav {
+                    top: 80px;
+
+
+                    &.show {
+                        background: #fff;
+
+                        .nav-link {
+                            color: var(--heading-color);
+                            opacity: 0.7;
+
+                        }
+                    }
+                }
+
+            }
         }
+
+
     }
 
     //styles container
@@ -125,6 +152,7 @@
 
         .bars-icon {
             display: none;
+            @include transition-ease-in;
         }
 
         //responsive max-width: 991px show bars button
@@ -147,19 +175,19 @@
                 margin-right: 0;
                 position: absolute;
                 right: 0;
-                top:99px;
+                top: 100px;
                 right: 0;
                 width: 100%;
                 height: 0;
                 background: rgba(0, 0, 0, 0.85); // Transparent background
                 border-radius: 0 0 8px 8px;
-                transition: all 0.5s ease-in-out;
+                @include transition-ease-in-out;
                 opacity: 0;
                 overflow: hidden;
                 gap: 1rem;
 
                 &.show {
-                   height: 100%;
+                    height: 100%;
                     opacity: 1;
                     overflow: hidden;
                     height: 250px;

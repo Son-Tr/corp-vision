@@ -2,7 +2,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import "./Header.scss"
+import "./Header.scss";
+import { motion } from "framer-motion";
 import { faBars, faBarsStaggered, faMoon, faX } from "@fortawesome/free-solid-svg-icons";
 
 
@@ -19,9 +20,9 @@ function Header() {
     useEffect(() => {
         let navBar = document.querySelector(".nav-header")
         const handleScroll = () => {
-            navBar.classList.toggle("nav-header-fixed",window.scrollY > 80); // add  nav-header-fixed class when window.scrollY > 80
+            navBar.classList.toggle("nav-header-fixed", window.scrollY > 80); // add  nav-header-fixed class when window.scrollY > 80
         }
-        
+
         window.addEventListener("scroll", handleScroll);
 
         // Cleanup function to remove the event listener
@@ -30,13 +31,16 @@ function Header() {
         }
     }, [])
 
+    // handle show and close the navbar
     const toggleMenu = () => {
-        if(isMenu){
-            document.querySelector(".nav-header").classList.remove("bg-show-menu");
+        if (isMenu) {
+            document.body.classList.toggle('noscroll'); 
+            document.querySelector(".nav-header").classList.toggle("bg-show-menu");
             setIsMenu(!isMenu);
             return;
-        }else{
-            document.querySelector(".nav-header").classList.add("bg-show-menu");
+        } else {
+            document.body.classList.toggle('noscroll'); 
+            document.querySelector(".nav-header").classList.toggle("bg-show-menu");
             setIsMenu(!isMenu)
             return;
         }
@@ -57,9 +61,20 @@ function Header() {
                         <FontAwesomeIcon icon={faMoon} />
                     </span>
                 </nav>
-                <span className="bars-icon" onClick={toggleMenu}>
-                 {!isMenu?<FontAwesomeIcon icon={faBars} /> : <FontAwesomeIcon icon={faX} />}   
-                </span>
+                <motion.span className="bars-icon" onClick={toggleMenu}
+                    
+                    initial={{ scale: 0.5 }}
+                    animate={{
+                        rotate: !isMenu ? 180 : -180,
+                        scale: 1
+                    }}
+                    transition={{
+                        duration: 0.3,
+                        type: "easeOut",
+                    }}
+                >
+                    {!isMenu ? <FontAwesomeIcon icon={faBars} /> : <FontAwesomeIcon icon={faX} />}
+                </motion.span>
             </header>
         </div>
     )
