@@ -33,10 +33,13 @@
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05);
 
         .container {
-
-            .logo {
-                color: var(--heading-color);
+            .nav-link-logo{
+                text-decoration: none;
+                .logo {
+                    color: var(--heading-color);
+                }
             }
+           
 
             .nav-link {
                 color: var(--heading-color);
@@ -56,11 +59,12 @@
 
 
                     &.show {
-                        background: #fff;
+                        background: var(--bg-color);
 
                         .nav-link {
                             color: var(--heading-color);
                             opacity: 0.7;
+
 
                         }
                     }
@@ -113,6 +117,7 @@
                 position: relative;
                 color: #fff;
                 opacity: 0.8;
+                text-decoration: none;
                 @include transition-ease-in;
 
                 &:hover {

@@ -3,6 +3,7 @@
 
 
 #about {
+    background: var(--bg-color);
     @include padding(48, 0, 48, 0);
 
     .container {

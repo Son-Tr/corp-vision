@@ -4,12 +4,13 @@ import React, { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import "./Header.scss";
 import { motion } from "framer-motion";
-import { faBars, faBarsStaggered, faMoon, faX } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faBarsStaggered, faMoon, faSun, faX } from "@fortawesome/free-solid-svg-icons";
 
 
 
 function Header() {
     const [isMenu, setIsMenu] = useState(false);
+    const [darkTheme, setDarkTheme] = useState(false)
     const location = useLocation(); // Hook to get the current location (route)
 
     // Close the menu whenever the route changes
@@ -31,15 +32,44 @@ function Header() {
         }
     }, [])
 
+    //get value form localstorage if dont have value we will get value from prefertheme of browser
+
+    useEffect(() => {
+        let localTheme = localStorage.getItem("theme");
+        
+        if (localTheme) {
+            setDarkTheme(localTheme === "dark"); // Simplified: No need for ternary operator
+            document.documentElement.setAttribute("data-theme", localTheme);
+        } else {
+            let preferTheme = window.matchMedia("(prefers-color-scheme: dark)").matches; // Corrected parentheses
+            let defaultTheme = preferTheme ? "dark" : "light";
+            setDarkTheme(defaultTheme === "dark"); // if defaultTheme === "dark" is correct will return true. if incorrect return false
+            document.documentElement.setAttribute("data-theme", defaultTheme);
+            // Save the default theme in localStorage
+            localStorage.setItem("theme", defaultTheme);
+        }
+    }, []);
+    
+
+
+
+    // handle change the theme dark and light 
+    const toggleTheme = () => {
+        let newTheme = darkTheme ? "light" : "dark"; // check current theme
+        setDarkTheme(!darkTheme);
+        document.documentElement.setAttribute("data-theme", newTheme) // add that theme in body tag
+        localStorage.setItem("theme", newTheme); // save them in the local storage for next time to use
+    }
+
     // handle show and close the navbar
     const toggleMenu = () => {
         if (isMenu) {
-            document.body.classList.toggle('noscroll'); 
+            document.body.classList.toggle('noscroll');
             document.querySelector(".nav-header").classList.toggle("bg-show-menu");
             setIsMenu(!isMenu);
             return;
         } else {
-            document.body.classList.toggle('noscroll'); 
+            document.body.classList.toggle('noscroll');
             document.querySelector(".nav-header").classList.toggle("bg-show-menu");
             setIsMenu(!isMenu)
             return;
@@ -48,7 +78,7 @@ function Header() {
     return (
         <div className="nav-header">
             <header className="container">
-                <NavLink to="/">
+                <NavLink className="nav-link-logo" to="/">
                     <span className="icon-logo"><FontAwesomeIcon icon={faBarsStaggered} /></span>
                     <span className="logo">Corp Vision</span>
                 </NavLink>
@@ -57,12 +87,12 @@ function Header() {
                     <NavLink className="nav-link" to='/about'>About</NavLink>
                     <NavLink className="nav-link" to='/services'>Services</NavLink>
                     <NavLink className="nav-link" to='/Contact'>Contact</NavLink>
-                    <span className="light-dark-btn">
-                        <FontAwesomeIcon icon={faMoon} />
+                    <span className="light-dark-btn" onClick={toggleTheme}>
+                        <FontAwesomeIcon icon={darkTheme ? faSun : faMoon} />
                     </span>
                 </nav>
                 <motion.span className="bars-icon" onClick={toggleMenu}
-                    
+
                     initial={{ scale: 0.5 }}
                     animate={{
                         rotate: !isMenu ? 180 : -180,

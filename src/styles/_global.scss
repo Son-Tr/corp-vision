@@ -4,8 +4,10 @@
    box-sizing: border-box;
    font-size: 1rem;
    font-family: "Jost", sans-serif;
-   // -webkit-font-smoothing: antialiased;
-   // -moz-osx-font-smoothing: grayscale;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+
+   @include transition-ease-in-out;
 }
 
 // remove css default
