@@ -30,6 +30,9 @@
 }
 
 //transition
+@mixin transition-ease {
+    transition: all 0.3s ease;
+}
 @mixin transition-ease-in {
     transition: all 0.3s ease-in;
 }

@@ -9,8 +9,6 @@ import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-
-
 // import required modules
 import { Autoplay, EffectFade, Navigation } from "swiper/modules";
 import { banners } from "../../assets/data/dataJson";
@@ -24,11 +22,11 @@ function Banner() {
                 spaceBetween={30}
                 effect={"fade"}
                 navigation={true}
-                // autoplay={{
-                //     delay: 4000,
-                //     disableOnInteraction: false,
-                // }}
-                modules={[EffectFade, Navigation]}
+                autoplay={{
+                    delay: 4000,
+                    disableOnInteraction: false,
+                }}
+                modules={[EffectFade, Navigation, Autoplay]}
                 className="mySwiper"
                 onSlideChange={(slide)=>setActiveSlide(slide.activeIndex)}// track slide change.
             >
