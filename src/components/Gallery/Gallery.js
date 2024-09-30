@@ -54,6 +54,25 @@ const Gallery = () => {
         document.body.classList.toggle('noscroll');
     };
 
+    // render photo 
+    const renderPhoto = (img, index) => {
+        return (
+            <div className="photo-item" key={index} onClick={() => openGallery(index)}>
+                <img src={img.thumbnail} alt={`Gallery item ${index + 1}`} />
+
+                <div className="hover-overlay"></div>
+                <div className="hover-content">
+                    <span className="title">
+                        Project{index + 1}
+                    </span>
+                    <span class="content">
+                        Quisque ut lectus, eros et, sed commodo risus.
+                    </span>
+                </div>
+            </div>
+        );
+    };
+
     return (
         <div className='gallery'>
             <div className="container">
@@ -63,12 +82,8 @@ const Gallery = () => {
                 </div>
 
                 <div className="gallery-photo">
-                    {/* Display images statically */}
-                    {images.map((img, index) => (
-                        <div className="photo-item" key={index} onClick={() => openGallery(index)}>
-                            <img src={img.thumbnail} alt={`Gallery item ${index + 1}`} />
-                        </div>
-                    ))}
+                    {/* Display images */}
+                    {images.map((img, index) => renderPhoto(img, index))}
                 </div>
 
                 {/* Conditional rendering for ImageGallery */}
@@ -80,12 +95,14 @@ const Gallery = () => {
                         transition={{ duration: 0.8, ease: "easeInOut" }}
                         exit={{ opacity: 0, y: 50 }}
                     >
-                        <span className="close-button" onClick={closeGallery}>&times;</span>
-                        <ImageGallery
-                            items={images}
-                            startIndex={currentIndex}
-                            showThumbnails={false}
-                        />
+                        <div className='img-box'>
+                            <ImageGallery
+                                items={images}
+                                startIndex={currentIndex}
+                                showThumbnails={false}
+                            />
+                            <span className="close-button" onClick={closeGallery}>&times;</span>
+                        </div>
                     </motion.div>
 
                 )}

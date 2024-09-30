@@ -17,7 +17,7 @@ export const banners = [
         content: "Success doesn't happen by chance, it’s built on smart decisions, relentless effort, and expert guidance. ",
         backgroundImage: b2,
         classNameTitle: " animate__fadeInDown ",
-        classNameContent: " animate__fadeInDown",
+        classNameContent: " animate__fadeInUp",
         btn: " animate__fadeInUp",
 
 
