@@ -1,36 +1,43 @@
-import React, { useState } from "react";
 import "./Banner.scss";
 import 'animate.css';
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
+import React, { useState } from "react";
+import { banners } from "../../assets/data/dataJson";
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
 // import required modules
 import { Autoplay, EffectFade, Navigation } from "swiper/modules";
-import { banners } from "../../assets/data/dataJson";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Banner() {
     const [activeSlide, setActiveSlide] = useState(0);
-    
+
     return (
         <div className="banner-wrap">
             <Swiper
                 spaceBetween={30}
                 effect={"fade"}
-                navigation={true}
+                navigation={{
+                    nextEl: '.next-btn',
+                    prevEl: '.pre-btn'
+                }}
                 autoplay={{
                     delay: 4000,
                     disableOnInteraction: false,
                 }}
                 modules={[EffectFade, Navigation, Autoplay]}
                 className="mySwiper"
-                onSlideChange={(slide)=>setActiveSlide(slide.activeIndex)}// track slide change.
+                onSlideChange={(slide) => setActiveSlide(slide.activeIndex)}// track slide change.
             >
-                {banners.map(({ id, title, content, backgroundImage, classNameTitle, classNameContent,btn },index) => (
+                {banners.map(({ id, title, content, backgroundImage, classNameTitle, classNameContent, btn }, index) => (
                     <SwiperSlide key={id}>
                         <div
                             className="banner-slider"
@@ -45,19 +52,25 @@ function Banner() {
                                 >{title}</h1>
 
                                 <p
-                                   className={`banner-content animate__animated ${activeSlide === index ? classNameContent : ''}`}
+                                    className={`banner-content animate__animated ${activeSlide === index ? classNameContent : ''}`}
                                 >{content}</p>
 
                                 <button
-                                className={`btn animate__animated animate__delay-1s ${activeSlide === index ? btn : ''}`}
+                                    className={`btn animate__animated animate__delay-1s ${activeSlide === index ? btn : ''}`}
                                 >Learn More</button>
                                 <div className="over-play"></div>
                             </div>
-                           
+
                         </div>
                     </SwiperSlide>
                 ))}
             </Swiper>
+            <button className="pre-btn btn-swiper">
+                <FontAwesomeIcon icon={faArrowLeft} />
+            </button>
+            <button className="next-btn btn-swiper">
+                <FontAwesomeIcon icon={faArrowRight} />
+            </button>
             <div className="shape">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 280">
                     <path fillOpacity={1}>

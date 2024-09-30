@@ -1,9 +1,9 @@
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useEffect, useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
 import "./Header.scss";
 import { motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import { NavLink, useLocation } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faBarsStaggered, faMoon, faSun, faX } from "@fortawesome/free-solid-svg-icons";
 
 
@@ -64,7 +64,7 @@ function Header() {
     // handle show and close the navbar
     const toggleMenu = () => {
         if (isMenu) {
-            document.body.classList.toggle('noscroll');
+            document.body.classList.toggle('noscroll');// display body scroll which navbar is in active;
             document.querySelector(".nav-header").classList.toggle("bg-show-menu");
             setIsMenu(!isMenu);
             return;

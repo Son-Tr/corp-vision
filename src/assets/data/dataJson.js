@@ -17,7 +17,7 @@ export const banners = [
         content: "Success doesn't happen by chance, it’s built on smart decisions, relentless effort, and expert guidance. ",
         backgroundImage: b2,
         classNameTitle: " animate__fadeInDown ",
-        classNameContent: " animate__zoomInDown",
+        classNameContent: " animate__fadeInDown",
         btn: " animate__fadeInUp",
 
 
@@ -28,7 +28,7 @@ export const banners = [
         content: "We understand that embracing digital change is not just about adopting the latest tools, it’s about fundamentally rethinking how you operate and deliver value.",
         backgroundImage: b3,
         classNameTitle: " animate__flipInY ",
-        classNameContent: " animate__zoomInRight",
+        classNameContent: " animate__fadeInDown",
         btn: "animate__fadeInDown",
 
 
@@ -39,7 +39,7 @@ export const banners = [
         content: "Success is not merely measured by profits but by the impact you have on your community, industry, and the world.",
         backgroundImage: b4,
         classNameTitle: "  animate__fadeInUp ",
-        classNameContent: " animate__zoomInUp",
+        classNameContent: " animate__fadeInUp",
         btn: " animate__fadeInDown ",
     }
 ];

@@ -16,19 +16,6 @@
 
         }
 
-        //industry title
-        .industry-title {
-            max-width: 800px;
-            text-align: center;
-            margin: auto;
-            margin-bottom: 3rem;
-
-            //responsive 
-            @include responsive-max(768px) {
-                margin-bottom: 1.5rem;
-            }
-        }
-
         //industry-list-box
         .industry-list-box {
             @include grid-column(3, 1fr);

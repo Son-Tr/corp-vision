@@ -4,22 +4,54 @@
 .banner-wrap {
     height: auto;
     position: relative;
-    //overflow: hidden;
+    overflow: hidden;
 
+    //  css shape 
     .shape {
         position: absolute;
-        bottom: -6px;
+        bottom: -5px;
         left: 0;
         width: 100%;
         z-index: 1;
-        sgv{
+
+        sgv {
             width: 100%;
         }
-        path{
+
+        path {
             fill: var(--bg-color);
             transition: fill 0.8s ease-in-out;
         }
     }
+
+    // btn styles
+    .btn-swiper {
+        position: absolute;
+
+        bottom: 50px;
+        font-size: 1rem;
+        background: var(--bg-color);
+        width: 50px;
+        height: 50px;
+        z-index: 2;
+        outline: none;
+        cursor: pointer;
+        border-radius: 100%;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.12);
+        border: 1px solid var(--border-color);
+        color: var(--heading-color);
+
+        // pre-btn
+        &.pre-btn {
+            right: 100px;
+        }
+
+        //next-btn
+        &.next-btn {
+            right: 25px;
+        }
+    }
+
 
     .banner-slider {
         min-height: 800px;
@@ -91,7 +123,9 @@
 
                 @include responsive-max(480px) {
                     @include font-size(36);
+                    margin: 0;
                 }
+                
             }
 
             .banner-content {
@@ -113,10 +147,18 @@
                     font-size: 1.1rem;
                 }
 
-                @include responsive-max(415px) {
+                @include responsive-max(480px) {
                     font-size: 1rem;
+                    margin: 0.8rem 0 0;
                 }
 
+            }
+
+            .btn{
+                //responsive
+                @include responsive-max(480px) {
+                    margin: 1rem 0 0;
+                }
             }
 
             .over-play {

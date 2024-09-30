@@ -1,0 +1,49 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.gallery {
+    padding: 3rem 0;
+
+    .container {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+
+        //responsive
+        @include responsive-max(576px) {
+            max-width: 90%;
+            padding: 2rem 0.5rem;
+
+        }
+
+        // gallery modal styles
+        .gallery-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            overflow: hidden;
+
+            .close-button {
+                position: absolute;
+                top: 20px;
+                right: 30px;
+                color: white;
+                font-size: 2rem;
+                cursor: pointer;
+            }
+
+            .image-gallery {
+                max-width: 90vw;
+                max-height: 80vh;
+            }
+        }
+
+
+    }
+}

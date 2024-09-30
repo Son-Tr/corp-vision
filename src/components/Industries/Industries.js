@@ -10,7 +10,7 @@ function Industries() {
     return (
         <div className="industry">
             <div className="container">
-                <div className="industry-title">
+                <div className="title">
                     <h5 className="title-small">
                         Beautifully crafted creative solutions
                     </h5>
