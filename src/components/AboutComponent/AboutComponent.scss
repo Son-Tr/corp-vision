@@ -243,21 +243,7 @@
                 grid-template-rows: repeat(3, 1fr);
             }
 
-
-
-            .box-content {
-                border-radius: 8px;
-                background-color: var(--bg-lightgrey);
-                box-shadow: var(--box-shadow);
-                @include padding(50, 35, 50, 35);
-                @include flex(center, flex-start, row);
-                gap: 20px;
-
-                //resonsive 
-                @include responsive-max(415px) {
-                    padding: 1.5rem .8rem;
-                }
-
+            .box {
                 &:last-child {
                     @include responsive-max(992px) {
                         grid-column: span 2;
@@ -269,27 +255,6 @@
                         justify-content: center;
                     }
 
-                }
-
-                .icon-left {
-                    color: var(--primary-color);
-
-                    svg {
-                        width: 40px;
-                        height: 40px;
-                    }
-
-                }
-
-                .content-right {
-                    .p-title {
-                        margin-bottom: 1rem;
-                    }
-                }
-
-                // resposive
-                @include responsive-min(992px) {
-                    padding: 3rem 1rem;
                 }
             }
         }

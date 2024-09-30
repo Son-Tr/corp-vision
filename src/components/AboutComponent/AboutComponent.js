@@ -46,7 +46,7 @@ function AboutComponent() {
                 </div>
                 <div className="list-feature">
 
-                    <div className="box-content">
+                    <div className="box">
                         <div className="icon-left">
                             <FontAwesomeIcon icon={faObjectGroup} />
                         </div>
@@ -61,7 +61,7 @@ function AboutComponent() {
                     </div>
 
 
-                    <div className="box-content">
+                    <div className="box">
                         <div className="icon-left">
                             <FontAwesomeIcon icon={faThumbsUp} />
                         </div>
@@ -76,7 +76,7 @@ function AboutComponent() {
                     </div>
 
 
-                    <div className="box-content">
+                    <div className="box">
                         <div className="icon-left">
                             <FontAwesomeIcon icon={faLightbulb} />
                         </div>

@@ -5,62 +5,80 @@
     background: var(--bg-grey);
     padding: 3rem 0;
 
-    //challenge wap
-    .challenge-wrap {
-        @include flex(center, center, row);
-         //responsive
-         @include responsive-max(992px){
-            flex-direction: column;
-            gap: 2.5rem;
-        }   
+    .container {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
 
-        // content part
-        .challenge-content {
-            width: 50%;
-            padding-right: 3rem;
+        //responsive
+        @include responsive-max(576px) {
+            max-width: 90%;
+            padding: 2rem 0.5rem;
 
-            //responsive
-            @include responsive-max(992px) {
-                width: 100%;
-                padding-right: 0;
-            }
-
-            .title-big {
-                margin-block: 1.5rem;
-            }
         }
 
-        //list box part
-        .challenge-list-box {
-            width: 50%;
-            @include grid-column(2, 1fr);
-            gap: 25px;
+        //challenge wap
+        .challenge-wrap {
+            @include flex(center, center, row);
 
             //responsive
             @include responsive-max(992px) {
-                width: 100%;
+                flex-direction: column;
+                gap: 2.5rem;
             }
 
-            .challenge-box {
-                border-radius: var(--border-radius);
-                text-align: center;
-                box-shadow: rgba(1, 1, 1, 0.05) 1px 1px 5px 0px;
-                background-color: var(--bg-color);
-                @include padding(40, 30, 40, 30);
+            // content part
+            .challenge-content {
+                width: 50%;
+                padding-right: 3rem;
 
-                transition: background 0.8s ease-in-out, transform 0.3s ease, box-shadow 0.3s ease;
-
-                //hover
-                &:hover {
-                    transform: translateY(-0.25rem);
-                    box-shadow: rgba(46, 41, 51, 0.08) 0px 2px 4px, rgba(71, 63, 79, 0.16) 0px 5px 10px;
+                //responsive
+                @include responsive-max(992px) {
+                    width: 100%;
+                    padding-right: 0;
                 }
 
-                .p-title {
-                    @include margin(25, 0, 0, 0);
+                .title-big {
+                    margin-block: 1.5rem;
                 }
             }
 
+            //list box part
+            .challenge-list-box {
+                width: 50%;
+                @include grid-column(2, 1fr);
+                gap: 25px;
+
+                //responsive
+                @include responsive-max(992px) {
+                    width: 100%;
+                }
+
+                @include responsive-max(480px) {
+                    grid-template-columns: repeat(1, 1fr);
+                    gap: 1.5rem;
+                }
+
+                .challenge-box {
+                    border-radius: var(--border-radius);
+                    text-align: center;
+                    box-shadow: rgba(1, 1, 1, 0.05) 1px 1px 5px 0px;
+                    background-color: var(--bg-color);
+                    @include padding(40, 30, 40, 30);
+
+                    transition: background 0.8s ease-in-out, transform 0.3s ease, box-shadow 0.3s ease;
+
+                    //hover
+                    &:hover {
+                        transform: translateY(-0.25rem);
+                        box-shadow: rgba(46, 41, 51, 0.08) 0px 2px 4px, rgba(71, 63, 79, 0.16) 0px 5px 10px;
+                    }
+
+                    .p-title {
+                        @include margin(25, 0, 0, 0);
+                    }
+                }
+
+            }
         }
     }
 }
