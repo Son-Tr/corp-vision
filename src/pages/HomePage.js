@@ -1,9 +1,10 @@
 import React from 'react'
 import Banner from '../components/Banner/Banner'
+import Gallery from '../components/Gallery/Gallery'
 import Challenge from '../components/Challenge/Challenge'
+import OurSuccess from '../components/OurSuccess/OurSuccess'
 import Industries from '../components/Industries/Industries'
 import AboutComponent from '../components/AboutComponent/AboutComponent'
-import Gallery from '../components/Gallery/Gallery'
 
 const HomePage = () => {
   return (
@@ -12,7 +13,9 @@ const HomePage = () => {
       <AboutComponent />
       <Challenge />
       <Industries />
-      <Gallery/>
+      <Gallery />
+      <OurSuccess />
+
     </>
   )
 }
