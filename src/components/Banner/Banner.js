@@ -1,21 +1,21 @@
-import "./Banner.scss";
 import 'animate.css';
+import "./Banner.scss";
 import React, { useState } from "react";
 import { banners } from "../../assets/data/dataJson";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import "swiper/css/effect-fade";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // import required modules
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Autoplay, EffectFade, Navigation } from "swiper/modules";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Banner() {
     const [activeSlide, setActiveSlide] = useState(0);

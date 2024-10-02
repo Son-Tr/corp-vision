@@ -33,8 +33,10 @@
             }
 
             .photo-item {
+                cursor: pointer;
                 overflow: hidden;
                 position: relative;
+                border-radius: 10px;
 
                 //img
                 img {
@@ -123,6 +125,7 @@
             z-index: 3;
             overflow: hidden;
             @include flex(center, center, row);
+         
 
             .img-box {
                 position: relative;

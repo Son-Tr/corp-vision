@@ -1,7 +1,7 @@
 
 import React from "react";
-import { about2 } from "../../assets/img/img";
 import "./AboutComponent.scss";
+import { about2 } from "../../assets/img/img";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLightbulb, faObjectGroup, faThumbsUp } from "@fortawesome/free-regular-svg-icons";
 
