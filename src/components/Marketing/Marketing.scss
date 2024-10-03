@@ -1,0 +1,23 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+
+.marketing {
+    padding: 3rem 0;
+    background: var(--bg-grey);
+
+    .container {
+        @include container-styles;
+
+        .flex-marketing {
+            @include grid-column(4, 1fr);
+            gap: 30px;
+            //responsive
+
+
+            .content-part{
+                grid-column: span 2;
+            }
+        }
+    }
+}

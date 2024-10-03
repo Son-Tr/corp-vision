@@ -7,12 +7,7 @@
     @include padding(48, 0, 48, 0);
 
     .container {
-        @include padding(48, 15, 24, 15);
-
-        //responsive
-        @include responsive-max(576px) {
-            padding: 2rem 0.5rem;
-        }
+        @include container-styles;
 
         //flex-about
         .flex-about {

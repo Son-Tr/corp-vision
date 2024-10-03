@@ -6,15 +6,7 @@
     padding: 3rem 0;
 
     .container {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-
-        //responsive
-        @include responsive-max(576px) {
-            max-width: 90%;
-            padding: 2rem 0.5rem;
-
-        }
+       @include container-styles;
 
         .flex-success {
             @include flex(center, flex-start, row);
@@ -46,6 +38,9 @@
                 //responsive
                 @include responsive-max(992px) {
                     width: 100%;
+                }
+                .title-big{
+                    margin-bottom: 1.5rem;
                 }
 
                 // progress box 

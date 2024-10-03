@@ -6,15 +6,7 @@
     background: var(--bg-color);
 
     .container {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-
-        //responsive
-        @include responsive-max(576px) {
-            max-width: 90%;
-            padding: 2rem 0.5rem;
-
-        }
+      @include container-styles;
 
         //industry-list-box
         .industry-list-box {

@@ -5,6 +5,7 @@ import Challenge from '../components/Challenge/Challenge'
 import OurSuccess from '../components/OurSuccess/OurSuccess'
 import Industries from '../components/Industries/Industries'
 import AboutComponent from '../components/AboutComponent/AboutComponent'
+import Marketing from '../components/Marketing/Marketing'
 
 const HomePage = () => {
   return (
@@ -15,7 +16,7 @@ const HomePage = () => {
       <Industries />
       <Gallery />
       <OurSuccess />
-
+      <Marketing/>
     </>
   )
 }
