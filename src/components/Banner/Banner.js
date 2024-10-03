@@ -30,7 +30,7 @@ function Banner() {
                     prevEl: '.pre-btn'
                 }}
                 autoplay={{
-                    delay: 4000,
+                    delay: 5000,
                     disableOnInteraction: false,
                 }}
                 modules={[EffectFade, Navigation, Autoplay]}
