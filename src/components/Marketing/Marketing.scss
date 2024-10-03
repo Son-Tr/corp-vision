@@ -12,11 +12,46 @@
         .flex-marketing {
             @include grid-column(4, 1fr);
             gap: 30px;
+
             //responsive
+            @include responsive-max(992px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
 
-
-            .content-part{
+            //content part
+            .content-part {
                 grid-column: span 2;
+
+                //title-small
+                .title-small {
+                    margin-bottom: 1rem;
+                }
+
+                // flex-digital
+                .flex-digital {
+                    margin-top: 3rem;
+                    @include flex(space-between, center, row);
+                    gap: 0.5rem;
+
+                    .digital {
+                        margin-bottom: 1rem;
+                        line-height: 1.5rem;
+                        @include font-size(35);
+                        color: var(--primary-color);
+                    }
+
+                    .p-title {
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+
+            // img part
+            .img-part {
+                img {
+                    border-radius: 10px;
+                }
+
             }
         }
     }

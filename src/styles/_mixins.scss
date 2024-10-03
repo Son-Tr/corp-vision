@@ -17,7 +17,6 @@
 
 @mixin grid-row($row, $size) {
     display: grid;
-
     grid-template-rows: repeat($row, $size)
 }
 
@@ -94,6 +93,10 @@
     padding-bottom: 3rem;
 
     //responsive
+    @include responsive-max(768px) {
+        padding: 1.5rem 0.5rem;
+    }
+
     @include responsive-max(576px) {
         max-width: 90%;
         padding: 2rem 0.5rem;
