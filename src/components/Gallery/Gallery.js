@@ -63,7 +63,7 @@ const Gallery = () => {
                 <div className="hover-overlay"></div>
                 <div className="hover-content">
                     <span className="title">
-                        Project{index + 1}
+                        Project {index + 1}
                     </span>
                     <span class="content">
                         Quisque ut lectus, eros et, sed commodo risus.
