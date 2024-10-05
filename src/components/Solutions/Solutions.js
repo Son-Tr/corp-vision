@@ -11,14 +11,15 @@ const Solutions = () => {
     const openVideo = () => {
         setIsOpen(true);
         document.body.classList.toggle('noscroll');// display body scroll which showGallery is in active;
+        document.querySelector(".nav-header").style.zIndex = "1"; // header goes behind video
     }
 
     // handle close video 
     const closeVideo = () => {
         setIsOpen(false);
         document.body.classList.toggle('noscroll');// display body scroll which showGallery is in active;
+        document.querySelector(".nav-header").style.zIndex = "3";// back on the start
     }
-
 
     return (
         <div className="solutions">
@@ -36,17 +37,17 @@ const Solutions = () => {
                     {/* AnimatePresence to ensure that the exit will run before component DOM   */}
                     <AnimatePresence>
                         {isOpen && (
-                            <div className="bg-video">
-                                <motion.div className="video"
-                                    initial={{ opacity: 0, scale: 0.5 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    exit={{ opacity: 0, scale: 0.5 }}
-                                    transition={{ duration: 0.3, ease: "easeInOut" }}
-                                >
+                            <motion.div className="bg-video"
+                                initial={{ opacity: 0, scale: 0.5 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                exit={{ opacity: 0, scale: 0.5 }}
+                                transition={{ duration: 0.3, ease: "easeInOut" }}
+                            >
+                                <div className="video">
                                     <span className="close-button" onClick={closeVideo}>&times;</span>
                                     <iframe width="560" height="315" src="https://www.youtube.com/embed/2N247cY2bEw?si=Pgqs4pvgWlaZ3QHI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                </motion.div>
-                            </div>
+                                </div>
+                            </motion.div>
                         )}
                     </AnimatePresence>
 

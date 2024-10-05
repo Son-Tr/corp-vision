@@ -6,7 +6,7 @@ function Layout({ Component }) {
     return (
         <>
             <Header/>
-            <Component />
+            <Component  />
             <Footer/>
         </>
     )
