@@ -2,10 +2,11 @@ import React from 'react'
 import Banner from '../components/Banner/Banner'
 import Gallery from '../components/Gallery/Gallery'
 import Challenge from '../components/Challenge/Challenge'
+import Marketing from '../components/Marketing/Marketing'
+import Solutions from '../components/Solutions/Solutions'
 import OurSuccess from '../components/OurSuccess/OurSuccess'
 import Industries from '../components/Industries/Industries'
 import AboutComponent from '../components/AboutComponent/AboutComponent'
-import Marketing from '../components/Marketing/Marketing'
 
 const HomePage = () => {
   return (
@@ -17,6 +18,7 @@ const HomePage = () => {
       <Gallery />
       <OurSuccess />
       <Marketing/>
+      <Solutions/>
     </>
   )
 }

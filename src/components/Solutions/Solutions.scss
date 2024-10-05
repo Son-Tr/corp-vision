@@ -1,0 +1,115 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+
+
+.solutions {
+    padding: 3rem 0;
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url("../../assets/img/bg1.jpg");
+
+    //responsive
+    @include responsive-max(768px){
+        background-attachment: scroll;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -1px;
+        left: 0;
+        height: 101%;
+        width: 100%;
+        background: var(--layer);
+        z-index: -1;
+
+    }
+
+    .container {
+        z-index: 2;
+        @include container-styles;
+
+        .solutions-content {
+            margin: auto;
+            max-width: 700px;
+
+            .title-big {
+                color: #eee;
+
+            }
+
+            .p-content {
+                margin: 1rem 0 1.5rem;
+                color: #eee;
+            }
+
+            // button styles
+            .btn-video {
+                scale: 1;
+                width: 70px;
+                height: 70px;
+                cursor: pointer;
+                border-radius: 50%;
+                background: transparent;
+                border: 2px solid #eee;
+                @include transition-ease-in-0ut-3;
+
+                //hover 
+                &:hover {
+                    scale: 1.2;
+                }
+
+                svg {
+                    color: #eee;
+                    height: 1.5rem;
+                    width: 1.5rem;
+                }
+            }
+
+            // video
+            .bg-video {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background-color: rgba(0, 0, 0, 0.8);
+                z-index: 3;
+                overflow: hidden;
+                @include flex(center, center, row);
+
+                .video {
+                    position: relative;
+
+                    //close btn
+                    .close-button {
+                        position: absolute;
+                        top: -44px;
+                        right: 0px;
+                        color: white;
+                        font-size: 2.5rem;
+                        cursor: pointer;
+                    }
+
+                    //responsive iframe
+                    iframe{
+                        @include responsive-max(568px){
+                            width: 460px;
+                        }
+                        @include responsive-max(450px){
+                            width: 360px;
+                            height: 250px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

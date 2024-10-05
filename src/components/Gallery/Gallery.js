@@ -1,6 +1,6 @@
 import './Gallery.scss';
-import { motion } from 'framer-motion';
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { c1, c2, c3, c4, c5, c6 } from '../../assets/img/img';
 
 //import react-image-gallery 
@@ -65,7 +65,7 @@ const Gallery = () => {
                     <span className="title">
                         Project {index + 1}
                     </span>
-                    <span class="content">
+                    <span className="content">
                         Quisque ut lectus, eros et, sed commodo risus.
                     </span>
                 </div>
@@ -86,26 +86,27 @@ const Gallery = () => {
                     {images.map((img, index) => renderPhoto(img, index))}
                 </div>
 
-                {/* Conditional rendering for ImageGallery */}
-                {showGallery && (
+                {/* Conditional rendering for ImageGallery. AnimatePresence to ensure that the exit will run before component DOM  */}
+                <AnimatePresence>
+                    {showGallery && (
+                        <motion.div className="gallery-modal"
+                            initial={{ opacity: 0, y: -50 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, ease: "easeInOut" }}
+                            exit={{ opacity: 0, y: 50 }}
+                        >
+                            <div className='img-box'>
+                                <ImageGallery
+                                    items={images}
+                                    startIndex={currentIndex}
+                                    showThumbnails={false}
+                                />
+                                <span className="close-button" onClick={closeGallery}>&times;</span>
+                            </div>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
 
-                    <motion.div className="gallery-modal"
-                        initial={{ opacity: 0, y: -50 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, ease: "easeInOut" }}
-                        exit={{ opacity: 0, y: 50 }}
-                    >
-                        <div className='img-box'>
-                            <ImageGallery
-                                items={images}
-                                startIndex={currentIndex}
-                                showThumbnails={false}
-                            />
-                            <span className="close-button" onClick={closeGallery}>&times;</span>
-                        </div>
-                    </motion.div>
-
-                )}
             </div>
         </div>
     );
