@@ -6,21 +6,11 @@
     text-align: center;
     background: var(--bg-color);
 
-    //container
+    //container of adress
     .container {
         @include container-styles;
-        padding-bottom: 0;
 
-        //responsive
-        @include responsive-max(768px) {
-            padding-bottom: 0;
-        }
-
-        @include responsive-max(576px) {
-            padding-bottom: 0;
-        }
-
-        //adress
+        //adress part
         .adress {
             margin: auto;
 
@@ -103,5 +93,99 @@
                 }
             }
         }
+
+        // map part
+        .map {
+            padding: 3rem 0;
+
+            iframe {
+                width: 100%;
+                min-height: 400px;
+                height: auto;
+
+                //responsive
+                @include responsive-max(640px) {
+                    min-height: 350px;
+                }
+
+                @include responsive-max(568px) {
+                    min-height: 300px;
+                }
+
+                @include responsive-max(480px) {
+                    min-height: 300px;
+                }
+            }
+        }
+
+        // form-container part
+
+        .form-container {
+            padding: 1rem;
+
+            //form-title 
+            .form-title {
+                margin-bottom: 3rem;
+
+                @include responsive-max(992px) {
+                    margin-bottom: 1.5rem;
+                }
+            }
+
+            //form styles
+            .form-input {
+                gap: 20px;
+                @include grid-column(2, 1fr);
+
+                //responsive form-input
+                @include responsive-max(568px) {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+
+                //input styles
+                .input {
+                    width: 100%;
+                    color: var(--font-color);
+                    background: var(--bg-grey);
+                    font-size: 18px;
+                    font-weight: normal;
+                    font-style: normal;
+                    border: none;
+                    font-family: inherit;
+                    padding: 0px 25px;
+                    border: 1px solid var(--border-color-light);
+                    outline: none;
+                    border-radius: var(--border-radius);
+                    display: inline-block;
+                    line-height: 50px;
+                    box-shadow: none;
+
+
+                }
+
+                // textarea styles
+                textarea {
+                    grid-column: span 2;
+                    resize: none;
+                    overflow: auto;
+
+                    //responsive textarea
+                    @include responsive-max(568px) {
+                        grid-column: span 1;
+                    }
+                }
+
+                .button {
+                    grid-column: span 2;
+
+                    //responsive button
+                    @include responsive-max(568px) {
+                        grid-column: span 1;
+                    }
+                }
+            }
+        }
     }
+
+
 }

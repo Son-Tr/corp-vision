@@ -1,9 +1,11 @@
 import React from 'react'
 import './ContactUs.scss'
+import Map from './Map'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMap, faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
+import FormInput from './FormInput'
 
 
 const ContactUs = () => {
@@ -23,7 +25,7 @@ const ContactUs = () => {
                     <div className="adress-list-box">
                         <div className="adress-box">
                             <div className="icon-box">
-                            <FontAwesomeIcon icon={faMap} />
+                                <FontAwesomeIcon icon={faMap} />
                             </div>
                             <div className="text-box">
                                 <h3>
@@ -34,7 +36,7 @@ const ContactUs = () => {
                         </div>
                         <div className="adress-box">
                             <div className="icon-box">
-                            <FontAwesomeIcon icon={faPhone} />
+                                <FontAwesomeIcon icon={faPhone} />
                             </div>
                             <div className="text-box">
                                 <h3>
@@ -45,7 +47,7 @@ const ContactUs = () => {
                             </div>
                         </div> <div className="adress-box">
                             <div className="icon-box">
-                            <FontAwesomeIcon icon={faEnvelope} />
+                                <FontAwesomeIcon icon={faEnvelope} />
                             </div>
                             <div className="text-box">
                                 <h3>
@@ -57,8 +59,9 @@ const ContactUs = () => {
                         </div>
                     </div>
                 </div>
+                <Map />
+                <FormInput/>
             </div>
-
         </div>
     )
 }
