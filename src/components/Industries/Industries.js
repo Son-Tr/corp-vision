@@ -6,7 +6,7 @@ import { faBuilding, faCopy } from "@fortawesome/free-regular-svg-icons";
 import { faChartLine, faCode, faFileContract, faMoneyBill } from "@fortawesome/free-solid-svg-icons";
 
 
-function Industries() {
+const Industries = () => {
     return (
         <div className="industry">
             <div className="container">

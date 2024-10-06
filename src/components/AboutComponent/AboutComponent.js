@@ -5,7 +5,7 @@ import { about2 } from "../../assets/img/img";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLightbulb, faObjectGroup, faThumbsUp } from "@fortawesome/free-regular-svg-icons";
 
-function AboutComponent() {
+const AboutComponent = () => {
     return (
         <div id="about">
             <div className="container">

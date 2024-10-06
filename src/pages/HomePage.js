@@ -8,6 +8,7 @@ import OurSuccess from '../components/OurSuccess/OurSuccess'
 import Industries from '../components/Industries/Industries'
 import AboutComponent from '../components/AboutComponent/AboutComponent'
 import Team from '../components/Team/Team'
+import ContactUs from '../components/ContactUs/ContactUs'
 
 const HomePage = () => {
   return (
@@ -18,9 +19,10 @@ const HomePage = () => {
       <Industries />
       <Gallery />
       <OurSuccess />
-      <Marketing/>
-      <Solutions/>
-      <Team/>
+      <Marketing />
+      <Solutions />
+      <Team />
+      <ContactUs />
     </>
   )
 }

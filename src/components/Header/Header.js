@@ -8,7 +8,7 @@ import { faBars, faBarsStaggered, faMoon, faSun, faX } from "@fortawesome/free-s
 
 
 
-function Header() {
+const Header = () => {
     const [isMenu, setIsMenu] = useState(false);
     const [darkTheme, setDarkTheme] = useState(false)
     const location = useLocation(); // Hook to get the current location (route)

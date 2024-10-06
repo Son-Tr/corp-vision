@@ -1,0 +1,107 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.contact-us {
+    padding: 3rem 0;
+    text-align: center;
+    background: var(--bg-color);
+
+    //container
+    .container {
+        @include container-styles;
+        padding-bottom: 0;
+
+        //responsive
+        @include responsive-max(768px) {
+            padding-bottom: 0;
+        }
+
+        @include responsive-max(576px) {
+            padding-bottom: 0;
+        }
+
+        //adress
+        .adress {
+            margin: auto;
+
+
+            //adress-title
+            .adress-title {
+                max-width: 800px;
+                margin: 0 auto 3rem;
+
+                //responsive
+                @include responsive-max(768px) {
+                    margin-bottom: 1.5rem;
+                }
+            }
+
+            .adress-list-box {
+                @include grid-column(3, 1fr);
+                gap: 30px;
+
+                //responsive
+                @include responsive-max(992px) {
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 1.5rem;
+                }
+
+                @include responsive-max(768px) {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+
+                //adress-box
+                .adress-box {
+                    gap: 1rem;
+                    padding: 2.5rem 1rem;
+                    background: var(--bg-grey);
+                    @include flex(center, flex-start, row);
+
+                    //responsive
+                    @include responsive-max(768px) {
+                        @include flex(flex-start, flex-start, row);
+                    }
+
+
+                    //responsive nth:first-child
+                    &:nth-child(1) {
+                        @include responsive-max(992px) {
+                            grid-column: span 2;
+                        }
+
+                        @include responsive-max(768px) {
+                            grid-column: span 1;
+                        }
+                    }
+
+                    //icon-box
+                    .icon-box {
+                        svg {
+                            width: 40px;
+                            height: 40px;
+                            color: var(--heading-color);
+
+                            //responsive
+                            @include responsive-max(1024px) {
+                                width: 35px;
+                                height: 35px;
+                            }
+                        }
+                    }
+
+                    //text-box
+                    .text-box {
+                        text-align: left;
+
+                        h3 {
+                            font-weight: 600;
+                            margin-bottom: 0.5rem;
+                            @include font-size(22);
+                            color: var(--heading-color);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

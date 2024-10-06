@@ -1,5 +1,5 @@
-import React from 'react'
 import './Team.scss'
+import React from 'react'
 import { team1, team2, team3, team4 } from '../../assets/img/img'
 
 const listMenber = [
@@ -39,7 +39,7 @@ const Team = () => {
                     {/* render list img  */}
                     {listMenber.map(({ img, name, role }, index) => {
                         return (<div className="member" key={index}>
-                            <img src={img} alt="${name} {index}" />
+                            <img src={img} alt={name + index} />
                             <p className="p-title">{name}</p>
                             <p className="p-content">{role}</p>
                         </div>)

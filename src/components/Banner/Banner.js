@@ -17,7 +17,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Autoplay, EffectFade, Navigation } from "swiper/modules";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
-function Banner() {
+const Banner = () => {
     const [activeSlide, setActiveSlide] = useState(0);
 
     return (
