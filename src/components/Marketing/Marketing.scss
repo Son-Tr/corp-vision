@@ -30,7 +30,7 @@
                 // flex-digital
                 .flex-digital {
                     margin-top: 3rem;
-                    @include flex(space-between, center, row);
+                    @include flex(space-between, flex-start, row);
                     gap: 0.5rem;
 
                     //digital
@@ -43,6 +43,12 @@
 
                     .p-title {
                         margin-bottom: 1rem;
+                        line-height: 1.5rem;
+
+                        //responsive 
+                        @include responsive-max(500px) {
+                            min-height: 3rem;
+                        }
                     }
                 }
             }
