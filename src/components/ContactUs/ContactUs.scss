@@ -180,6 +180,9 @@
 
                 .button {
                     grid-column: span 2;
+                    .btn{
+                        margin-top: 0;
+                    }
 
                     //responsive button
                     @include responsive-max(568px) {
