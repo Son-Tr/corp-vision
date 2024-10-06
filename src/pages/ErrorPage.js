@@ -1,8 +1,11 @@
 import React from 'react'
+import DynamicBanner from '../components/DynamicBanner/DynamicBanner'
 
 const ErrorPage = () => {
   return (
-    <div>ErrorPage</div>
+    <div>
+      <DynamicBanner />
+    </div>
   )
 }
 

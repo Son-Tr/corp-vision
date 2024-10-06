@@ -14,9 +14,10 @@
     background-attachment: fixed;
     background-image: url("../../assets/img/bg1.jpg");
 
-    //responsive
-    @include responsive-max(768px){
-        background-attachment: scroll;
+    //responsive solutions 
+    @include responsive-max(1024px) {
+       background-attachment: scroll;
+       background-position: center top;
     }
 
     &::before {
@@ -86,7 +87,7 @@
 
                 .video {
                     position: relative;
-    
+
                     //close btn
                     .close-button {
                         position: absolute;
@@ -98,11 +99,12 @@
                     }
 
                     //responsive iframe
-                    iframe{
-                        @include responsive-max(576px){
+                    iframe {
+                        @include responsive-max(576px) {
                             width: 460px;
                         }
-                        @include responsive-max(450px){
+
+                        @include responsive-max(450px) {
                             width: 360px;
                             height: 250px;
                         }
