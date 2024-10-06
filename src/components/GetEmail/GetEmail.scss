@@ -4,6 +4,7 @@
 .get-email {
     padding: 3rem 0;
     text-align: center;
+    background-size: contain;
     background-color: #151421;
     background-position: center;
     background-repeat: no-repeat;
@@ -47,8 +48,7 @@
                 line-height: 1.75rem;
                 background: var(--bg-color);
                 background-color: rgba(0, 0, 0, 0.2);
-                border-color: rgba(255, 255, 255, 0.15);
-                border: 1px solid var(--border-color-light);
+                border: 1px solid rgba(255, 255, 255, 0.15);
             }
 
             .btn {

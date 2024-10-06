@@ -52,7 +52,6 @@
                         @include flex(flex-start, flex-start, row);
                     }
 
-
                     //responsive nth:first-child
                     &:nth-child(1) {
                         @include responsive-max(992px) {
@@ -88,6 +87,10 @@
                             margin-bottom: 0.5rem;
                             @include font-size(22);
                             color: var(--heading-color);
+                        }
+
+                        .p-content {
+                            color: var(--font-color);
                         }
                     }
                 }

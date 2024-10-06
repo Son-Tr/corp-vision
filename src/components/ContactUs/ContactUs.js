@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMap, faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
 import FormInput from './FormInput'
+import { NavLink } from 'react-router-dom'
 
 
 const ContactUs = () => {
@@ -42,10 +43,15 @@ const ContactUs = () => {
                                 <h3>
                                     Give us a call
                                 </h3>
-                                <p className='p-content'>+84 404-11-22-89</p>
-                                <p className='p-content'>+84 404-11-22-99</p>
+                                <NavLink className='p-content' to='tel:+84 404-11-22-89'>
+                                    +84 404-11-22-89
+                                </NavLink>
+                                <NavLink className='p-content' to='tel:+84 404-11-22-99'>
+                                    +84 404-11-22-99
+                                </NavLink>
                             </div>
-                        </div> <div className="adress-box">
+                        </div>
+                        <div className="adress-box">
                             <div className="icon-box">
                                 <FontAwesomeIcon icon={faEnvelope} />
                             </div>
@@ -53,14 +59,18 @@ const ContactUs = () => {
                                 <h3>
                                     Help Desk
                                 </h3>
-                                <p className='p-content'>company@gmail.com</p>
-                                <p className='p-content'>support@gmail.com</p>
+                                <NavLink className='p-content' to='mailto:info@example.com'>
+                                    info@example.com
+                                </NavLink>
+                                <NavLink className='p-content' to='mailto:info@example.com'>
+                                    info@support.com
+                                </NavLink>
                             </div>
                         </div>
                     </div>
                 </div>
                 <Map />
-                <FormInput/>
+                <FormInput />
             </div>
         </div>
     )

@@ -84,32 +84,12 @@
         @include flex(space-between, center, row);
         @include padding(20, 0, 20, 0);
 
-        .icon-logo {
-            display: inline-block;
-            color: var(--primary-color);
-            @include margin(0, 5, 0, 0);
-
-            svg {
-                width: 2rem;
-                height: 2rem;
-            }
-        }
-
-        .logo {
-            color: #fff;
-            font-weight: 700;
-            @include transition-ease-in;
-            font-size: 2rem;
-            line-height: 2rem;
-        }
-
         // nav
         nav {
             margin-right: 3rem;
             font-weight: 500;
             @include flex(center, center, row);
             gap: 1.8rem;
-
 
             .nav-link {
                 font-size: 1rem;
