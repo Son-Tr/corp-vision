@@ -1,0 +1,47 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.team {
+    padding: 3rem 0;
+    background: var(--bg-grey);
+    text-align: center;
+
+    .container {
+        @include container-styles;
+
+        .title-big {
+            margin-bottom: 3rem;
+
+            //resppnsive
+            @include responsive-max(992px) {
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        //list member
+        .list-member {
+            @include grid-column(4, 1fr);
+            gap: 30px;
+
+            // responsive 
+            @include responsive-max(992px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @include responsive-max(576px) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            //member
+            .member {
+                img {
+                    border-radius: 10px;
+                }
+
+                .p-title {
+                    margin: 1.5rem 0 0.25rem;
+                }
+            }
+        }
+    }
+}

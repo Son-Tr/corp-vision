@@ -90,7 +90,7 @@
                     //close btn
                     .close-button {
                         position: absolute;
-                        bottom: -44px;
+                        top: -44px;
                         right: 0px;
                         color: white;
                         font-size: 2.5rem;
@@ -99,7 +99,7 @@
 
                     //responsive iframe
                     iframe{
-                        @include responsive-max(568px){
+                        @include responsive-max(576px){
                             width: 460px;
                         }
                         @include responsive-max(450px){

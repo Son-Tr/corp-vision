@@ -1,8 +1,8 @@
 import './Solutions.scss'
-import { motion, AnimatePresence } from 'framer-motion';
 import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { motion, AnimatePresence } from 'framer-motion';
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Solutions = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -37,17 +37,17 @@ const Solutions = () => {
                     {/* AnimatePresence to ensure that the exit will run before component DOM   */}
                     <AnimatePresence>
                         {isOpen && (
-                            <motion.div className="bg-video"
-                                initial={{ opacity: 0, scale: 0.5 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                exit={{ opacity: 0, scale: 0.5 }}
-                                transition={{ duration: 0.3, ease: "easeInOut" }}
-                            >
-                                <div className="video">
+                            <div className="bg-video">
+                                <motion.div className="video"
+                                    initial={{ opacity: 0, scale: 0.5 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    exit={{ opacity: 0, scale: 0.5 }}
+                                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                                >
                                     <span className="close-button" onClick={closeVideo}>&times;</span>
                                     <iframe width="560" height="315" src="https://www.youtube.com/embed/2N247cY2bEw?si=Pgqs4pvgWlaZ3QHI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                </div>
-                            </motion.div>
+                                </motion.div>
+                            </div>
                         )}
                     </AnimatePresence>
 

@@ -7,6 +7,7 @@ import Solutions from '../components/Solutions/Solutions'
 import OurSuccess from '../components/OurSuccess/OurSuccess'
 import Industries from '../components/Industries/Industries'
 import AboutComponent from '../components/AboutComponent/AboutComponent'
+import Team from '../components/Team/Team'
 
 const HomePage = () => {
   return (
@@ -19,6 +20,7 @@ const HomePage = () => {
       <OurSuccess />
       <Marketing/>
       <Solutions/>
+      <Team/>
     </>
   )
 }
