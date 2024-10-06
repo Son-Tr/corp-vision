@@ -1,0 +1,63 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.get-email {
+    padding: 3rem 0;
+    text-align: center;
+    background-color: #151421;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../../assets/img/map.png");
+
+    .container {
+        @include container-styles;
+
+        .title-big {
+            color: #fff;
+        }
+
+        .p-content {
+            color: #eee;
+            margin-top: 1rem;
+        }
+
+        // group-input styles
+        .group-input {
+            margin-top: 3rem;
+            @include flex(center, center, row);
+
+            .icon {
+                color: #999;
+                background-color: rgba(0, 0, 0, 0.25);
+                border: 1px solid rgba(255, 255, 255, 0.15);
+                line-height: 1.75rem;
+                @include padding(14, 16, 14, 16);
+                svg {
+                    width: 1rem;
+                    height: 1rem;
+                }
+            }
+
+            input {
+                outline: none;
+                color: #999;
+                font-size: 1rem;
+                border-left: none;
+                padding: 14px 20px;
+                line-height: 1.75rem;
+                background: var(--bg-color);
+                background-color: rgba(0, 0, 0, 0.2);
+                border-color: rgba(255, 255, 255, 0.15);
+                border: 1px solid var(--border-color-light);
+            }
+
+            .btn {
+                margin-top: 0;
+                line-height: 1.75rem;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+                @include padding(14, 25, 14, 25);
+            }
+        }
+    }
+}

@@ -5,20 +5,22 @@ const input = [
     {
         type: "text",
         placeholder: "Name",
+        name: "name"
     },
     {
         type: "number",
         placeholder: "Your Phone Number",
-
+        name: "phone"
     },
     {
         type: "email",
         placeholder: "Email*",
-
+        name: "email"
     },
     {
         type: "text",
         placeholder: "Subject",
+        name: "subject"
     },
 ]
 
@@ -34,12 +36,13 @@ const FormInput = () => {
                 </p>
             </div>
             <form className="form-input" >
-                {input.map(({ type, placeholder }, index) => {
+                {input.map(({ type, placeholder, name }, index) => {
                     return (
                         <input
                             className='input'
                             key={index}
                             type={type}
+                            name={name}
                             required
                             placeholder={placeholder} />
                     )

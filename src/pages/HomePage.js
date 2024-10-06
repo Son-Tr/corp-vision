@@ -9,6 +9,7 @@ import Industries from '../components/Industries/Industries'
 import AboutComponent from '../components/AboutComponent/AboutComponent'
 import Team from '../components/Team/Team'
 import ContactUs from '../components/ContactUs/ContactUs'
+import GetEmail from '../components/GetEmail/GetEmail'
 
 const HomePage = () => {
   return (
@@ -23,6 +24,7 @@ const HomePage = () => {
       <Solutions />
       <Team />
       <ContactUs />
+      <GetEmail/>
     </>
   )
 }
