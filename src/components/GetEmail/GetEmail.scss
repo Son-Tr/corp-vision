@@ -33,6 +33,7 @@
                 border: 1px solid rgba(255, 255, 255, 0.15);
                 line-height: 1.75rem;
                 @include padding(14, 16, 14, 16);
+
                 svg {
                     width: 1rem;
                     height: 1rem;
@@ -49,6 +50,7 @@
                 background: var(--bg-color);
                 background-color: rgba(0, 0, 0, 0.2);
                 border: 1px solid rgba(255, 255, 255, 0.15);
+                border-radius: 0; // set border-radius on mobile
             }
 
             .btn {

@@ -1,0 +1,112 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.choose-us {
+    padding: 3rem 0;
+    text-align: center;
+    background-color: var(--bg-color);
+
+
+    .container {
+        @include container-styles;
+
+        // choose-us-title
+        .choose-us-title {
+            margin: auto;
+            margin-bottom: 3rem;
+            max-width: 800px;
+
+            .title-big {
+                margin: 0 3rem;
+
+                //responsive title-big
+                @include responsive-max(992px) {
+                    margin: 0;
+                }
+            }
+        }
+
+        //list-box
+        .list-box {
+            gap: 40px;
+            @include grid-column(2, 1fr);
+
+            //responsive list-box
+            @include responsive-max(992px) {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 2rem;
+            }
+
+            @include responsive-max(480px) {
+                gap: 1.5rem;
+            }
+
+            //choose-us-box
+            .choose-us-box {
+                gap: 2rem;
+                @include flex(space-between, center, row);
+
+                //responsive choose-us-box
+                @include responsive-max(480px) {
+                    gap: 1rem;
+                    align-items: flex-start;
+                }
+
+                //icon-box
+                .icon-box {
+
+                    //set color and boder-color for icon
+                    .color-1 {
+                        color: var(--primary-color);
+                        border-color: var(--primary-color);
+                    }
+
+                    --secondary-color .color-2 {
+                        color: var(--secondary-color);
+                        border-color: var(--secondary-color);
+                    }
+
+                    .color-3 {
+                        color: #ff4c4c;
+                        border-color: #ff4c4c;
+                    }
+
+                    .color-4 {
+                        color: #f48924;
+                        border-color: #f48924;
+                    }
+
+                    span {
+                        width: 80px;
+                        height: 80px;
+                        line-height: 90px;
+                        border: 1px solid;
+                        display: inline-block;
+                        border-radius: 10px;
+
+                        svg {
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+
+                }
+
+                //content-box
+                .content-box {
+                    text-align: left;
+
+                    //p-title
+                    .p-title {
+                        margin-bottom: 1rem;
+
+                        //responsive p-title
+                        @include responsive-max(480px) {
+                            margin-bottom: 0.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

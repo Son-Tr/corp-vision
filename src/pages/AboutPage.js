@@ -4,8 +4,8 @@ import AboutComponent from "../components/AboutComponent/AboutComponent";
 import Marketing from "../components/Marketing/Marketing";
 import Solutions from "../components/Solutions/Solutions";
 import Team from "../components/Team/Team";
-import Industries from "../components/Industries/Industries";
 import GetEmail from "../components/GetEmail/GetEmail";
+import ChooseUs from "../components/ChooseUs/ChooseUs";
 
 function AboutPage() {
     return (
@@ -15,7 +15,7 @@ function AboutPage() {
             <Marketing />
             <Solutions />
             <Team />
-            <Industries />
+           <ChooseUs/>
             <GetEmail/>
         </>
     )
