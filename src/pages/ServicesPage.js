@@ -1,13 +1,14 @@
 import React from 'react'
-import DynamicBanner from '../components/DynamicBanner/DynamicBanner'
 import Industries from '../components/Industries/Industries'
+import OurServices from '../components/OurServices/OurServices'
+import DynamicBanner from '../components/DynamicBanner/DynamicBanner'
 
 const ServicesPage = () => {
   return (
     <div>
       <DynamicBanner />
-
-      <Industries/>
+      <OurServices />
+      <Industries />
     </div>
   )
 }

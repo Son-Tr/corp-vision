@@ -1,12 +1,12 @@
 import React from 'react'
 import './ContactUs.scss'
 import Map from './Map'
+import FormInput from './FormInput'
 
+import { NavLink } from 'react-router-dom'
+import { faPhone } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMap, faEnvelope } from '@fortawesome/free-regular-svg-icons'
-import { faPhone } from '@fortawesome/free-solid-svg-icons'
-import FormInput from './FormInput'
-import { NavLink } from 'react-router-dom'
 
 
 const ContactUs = () => {

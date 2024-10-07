@@ -2,6 +2,7 @@ import React from 'react'
 import "./ChooseUs.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBriefcase, faChartLine, faGears, faMagnifyingGlassPlus } from '@fortawesome/free-solid-svg-icons'
+
 const ChooseUs = () => {
     return (
         <div className='choose-us'>

@@ -1,6 +1,6 @@
 import React from 'react'
-import DynamicBanner from '../components/DynamicBanner/DynamicBanner'
 import ContactUs from '../components/ContactUs/ContactUs'
+import DynamicBanner from '../components/DynamicBanner/DynamicBanner'
 
 const ContactPage = () => {
   return (

@@ -1,9 +1,9 @@
-import React from 'react'
 import "./Footer.scss"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebook, faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBarsStaggered } from '@fortawesome/free-solid-svg-icons'
+import { faFacebook, faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 
 const Footer = () => {

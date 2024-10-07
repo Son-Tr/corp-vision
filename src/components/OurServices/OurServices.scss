@@ -1,0 +1,88 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.services {
+    text-align: center;
+    background: var(--bg-grey);
+
+    .container {
+        @include container-styles;
+
+        //services-title
+        .services-title {
+            margin: auto;
+            max-width: 800px;
+            margin-bottom: 3rem;
+
+            //responsive services-title
+            @include responsive-max(768px) {
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        //services-list-box
+        .services-list-box {
+            gap: 30px;
+            @include grid-column(2, 1fr);
+
+            //responsive services-list-box
+            @include responsive-max(992px) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            //services-content
+            .services-content {
+                background: var(--bg-color);
+                @include padding(38, 50, 38, 50);
+
+                //responsive services-content
+                @include responsive-max(1200px) {
+                    padding: 1rem 1.5rem;
+                }
+
+                @include responsive-max(992px) {
+                    padding: 2rem 2.5rem;
+                }
+                @include responsive-max(768px) {
+                    padding: 1.5rem 2rem;
+                }
+
+                //img
+                img {
+                    width: 50px;
+                    height: 50px;
+                    margin-bottom: 1rem;
+                }
+
+                //h3
+                h3 {
+                    font-weight: 600;
+                    font-size: 1.75rem;
+                    line-height: 2.125rem;
+                    margin-bottom: 1rem;
+                    color: var(--heading-color);
+                }
+
+                .btn {
+                    margin-top: 1.2rem;
+                }
+            }
+
+            //services-box
+            .services-box {
+                .img-box {
+                    height: 100%;
+                    width: 100%;
+                }
+
+                //nth third
+                @include responsive-max(992px) {
+                    &:nth-child(3) {
+                        grid-row: 4;
+                     }
+                }
+               
+            }
+        }
+    }
+}
