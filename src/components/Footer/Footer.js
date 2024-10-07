@@ -41,7 +41,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="footer-contact">
-              <NavLink to='/about' target='_blank'>
+              <NavLink to='/contact' target='_blank'>
                 <p className="p-title">
                   Contact Info
                 </p>
