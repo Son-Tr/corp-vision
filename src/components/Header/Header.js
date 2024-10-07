@@ -13,11 +13,20 @@ const Header = () => {
     const [darkTheme, setDarkTheme] = useState(false)
     const location = useLocation(); // Hook to get the current location (route)
 
-    // Close the menu whenever the route changes
+    // Close the menu, remove noscroll class, and remove bg-show-menu class whenever the route changes
     useEffect(() => {
-        setIsMenu(false);
+        setIsMenu(false);// close menu
+        if (document.body.classList.contains('noscroll')) {
+            document.body.classList.remove('noscroll') //remove noscroll class
+        }
+
+        if (document.querySelector('.bg-show-menu')) {
+            document.querySelector('.bg-show-menu').classList.remove('bg-show-menu')//remove bg-show-menu class
+        }
+
     }, [location]); // Trigger the effect when the location (route) changes
 
+    //handle event scroll apply animation in header.
     useEffect(() => {
         let navBar = document.querySelector(".nav-header")
         const handleScroll = () => {
@@ -33,7 +42,6 @@ const Header = () => {
     }, [])
 
     //get value form localstorage if dont have value we will get value from prefertheme of browser
-
     useEffect(() => {
         let localTheme = localStorage.getItem("theme");
 
@@ -51,8 +59,6 @@ const Header = () => {
     }, []);
 
 
-
-
     // handle change the theme dark and light 
     const toggleTheme = () => {
         let newTheme = darkTheme ? "light" : "dark"; // check current theme
@@ -66,12 +72,12 @@ const Header = () => {
         if (isMenu) {
             document.body.classList.toggle('noscroll');// display body scroll which navbar is in active;
             document.querySelector(".nav-header").classList.toggle("bg-show-menu");
-            setIsMenu(!isMenu);
+            setIsMenu(false);
             return;
         } else {
             document.body.classList.toggle('noscroll');
             document.querySelector(".nav-header").classList.toggle("bg-show-menu");
-            setIsMenu(!isMenu)
+            setIsMenu(true)
             return;
         }
     }
