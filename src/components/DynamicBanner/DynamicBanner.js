@@ -58,7 +58,7 @@ const DynamicBanner = () => {
         case "/services":
             content = renderContent(listContent[1]);
             break;
-        case "/Contact":
+        case "/contact":
             content = renderContent(listContent[2]);
             break;
         default:

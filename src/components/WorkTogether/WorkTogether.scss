@@ -1,0 +1,37 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.work-together {
+    padding: 3rem 0;
+    background: var(--bg-color);
+
+    .container {
+        @include container-styles;
+
+
+        //flex-work-together
+        .flex-work-together {
+            gap: 1rem;
+            @include flex(space-between, center, row);
+
+            //responsive flex-work-together
+            @include responsive-max(1024px) {
+                @include flex(space-between, flex-start, column);
+            }
+
+            //title-part
+            .title-part {
+                width: 66%;
+                //responsive title-part
+                @include responsive-max(1024px) {
+                    width: 100%;
+                }
+
+                .p-content{
+                    margin-top: 1rem;
+                }
+
+            }
+        }
+    }
+}
