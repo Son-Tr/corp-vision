@@ -63,7 +63,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="copyright">
-        <p className='p-content'>&copy; {getyear()} Corp Vision All Rights Reserved | Design by W3Layouts | Built by <NavLink to="https://github.com/Son-Tr" target='_blank'>Son Tran</NavLink></p>
+        <p className='p-content'>&copy; {getyear()} Corp Vision All Rights Reserved | Designed by W3Layouts | Built by <NavLink to="https://github.com/Son-Tr" target='_blank'>Son Tran</NavLink></p>
       </div>
     </div>
   )
