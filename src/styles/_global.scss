@@ -7,6 +7,7 @@
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
    transition: background-color 0.8s ease-in-out;
+   scroll-behavior: smooth;
    // @include transition-ease-in-out;
 }
 
@@ -227,10 +228,11 @@ input[type=number] {
    @include margin(0, 5, 0, 0);
 
    svg {
-       width: 2rem;
-       height: 2rem;
+      width: 2rem;
+      height: 2rem;
    }
 }
+
 // logo styles
 .logo {
    color: #fff;
