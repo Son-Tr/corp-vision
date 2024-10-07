@@ -86,7 +86,7 @@ const Header = () => {
                     <NavLink className="nav-link" to='/'>Home</NavLink>
                     <NavLink className="nav-link" to='/about'>About</NavLink>
                     <NavLink className="nav-link" to='/services'>Services</NavLink>
-                    <NavLink className="nav-link" to='/Contact'>Contact</NavLink>
+                    <NavLink className="nav-link" to='/Contact'>Contact Us</NavLink>
                     <span className="light-dark-btn" onClick={toggleTheme}>
                         <FontAwesomeIcon icon={darkTheme ? faSun : faMoon} />
                     </span>
