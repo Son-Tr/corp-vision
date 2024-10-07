@@ -20,11 +20,15 @@ const Header = () => {
             document.body.classList.remove('noscroll') //remove noscroll class
         }
 
-        if (document.querySelector('.bg-show-menu')) {
+        if (document.querySelector('.bg-show-menu')) {//remove bg color
             document.querySelector('.bg-show-menu').classList.remove('bg-show-menu')//remove bg-show-menu class
         }
 
+        window.scrollTo(0, 0);// Scroll to the top on route change
+
     }, [location]); // Trigger the effect when the location (route) changes
+
+
 
     //handle event scroll apply animation in header.
     useEffect(() => {

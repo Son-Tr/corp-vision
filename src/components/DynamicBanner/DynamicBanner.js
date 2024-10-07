@@ -1,23 +1,34 @@
 import React from 'react'
 import "./DynamicBanner.scss"
 import { useLocation } from 'react-router-dom'
+import { b2, b3, b4 } from '../../assets/img/img'
+
+
 
 const listContent = [
     {
         title: "About Us",
-        content: "Experience you can trust, service you can count on."
+        content: "Experience you can trust, service you can count on.",
+        img: b2,
+        styleBgSize: "cover",
     },
     {
         title: "Services",
-        content: "We work with bold brands that we believe in."
+        content: "We work with bold brands that we believe in.",
+        img: b3,
+        styleBgSize: "cover",
     },
     {
         title: "Contact Us",
-        content: "We are an agency located in New York."
+        content: "We are an agency located in New York.",
+        img: b4,
+        styleBgSize: "cover",
     },
     {
         title: "Error Page",
-        content: "Page cannot be found."
+        content: "Page cannot be found.",
+        img: 'https://wp.w3layouts.com/corpvision/wp-content/themes/corpvision/assets/images/error.svg',
+        styleBgSize: "contain",
     },
 
 ]
@@ -26,8 +37,17 @@ const DynamicBanner = () => {
     const location = useLocation();
 
     const renderContent = (listContent) => {
-        let { title, content } = listContent
-        return <div className='dynamic-banner-content'><h2>{title}</h2><p>{content}</p><div className="over-play"></div></div>
+        let { title, content, img, styleBgSize } = listContent
+        return <div className='dynamic-banner' style={{ backgroundImage: `url(${img})`, backgroundSize: `${styleBgSize}` }}>
+            <div className="container">
+                <div className='dynamic-banner-content'>
+                    <h2>{title}</h2>
+                    <p>{content}</p>
+                    <div className="over-play">
+                    </div>
+                </div>
+            </div>
+        </div>
     }
 
     let content;
@@ -47,12 +67,12 @@ const DynamicBanner = () => {
     }
 
     return (
-        <div className='dynamic-banner'>
-            <div className="container">
-                {content}
-            </div>
-          
-        </div>
+        <>
+
+            {content}
+
+
+        </>
     )
 }
 

@@ -4,8 +4,10 @@
 .dynamic-banner {
     padding: 3rem 0;
     text-align: center;
-    background-size: cover;
-    background-image: url("../../assets/img/b1.jpg");
+    // background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    // background-image: url("../../assets/img/b1.jpg");
     position: relative;
 
     .container {
