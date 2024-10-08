@@ -42,14 +42,15 @@
 
                 //adress-box
                 .adress-box {
-                    gap: 1rem;
+                    gap: 2rem;
                     padding: 2.5rem 1rem;
                     background: var(--bg-grey);
-                    @include flex(center, flex-start, row);
+                    @include flex(flex-start, flex-start, row);
 
                     //responsive
                     @include responsive-max(768px) {
                         @include flex(flex-start, flex-start, row);
+                        gap: 1rem;
                     }
 
                     //responsive nth:first-child

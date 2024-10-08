@@ -100,6 +100,8 @@ const Gallery = () => {
                                     items={images}
                                     startIndex={currentIndex}
                                     showThumbnails={false}
+                                    showFullscreenButton={false}
+                                    showPlayButton={false}
                                 />
                                 <span className="close-button" onClick={closeGallery}>&times;</span>
                             </div>

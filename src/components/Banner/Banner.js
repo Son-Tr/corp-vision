@@ -11,10 +11,10 @@ import "swiper/css/effect-fade";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectFade, Navigation } from "swiper/modules";
 
 // import required modules
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Autoplay, EffectFade, Navigation } from "swiper/modules";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const Banner = () => {
