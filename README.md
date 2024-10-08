@@ -16,12 +16,12 @@ Corp Vision Project helped me learn how to manage and organize the **react proje
 ## Features
 - handle the event when the user scrolls.
 - Light and Dark theme and they will save the theme in the local storage.
-- Multi-page layout:
- -- Home page.
- - About page.
- - Services page.
- - Contact page.
- - Error page: a custom 404 page for handling incorrect URL.
 - Responsive Design: The layout is fully responsive, providing a smooth experience on all devices: desktop, tablet, and mobile.
+- Multi-page layout:
+ 1. Home page.
+ 2. About page.
+ 3. Services page.
+ 4. Contact page.
+ 5. Error page: a custom 404 page for handling incorrect URL.
 
 
