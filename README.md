@@ -17,7 +17,7 @@ Corp Vision Project helped me learn how to manage and organize the **react proje
 - handle the event when the user scrolls.
 - Light and Dark theme and they will save the theme in the local storage.
 - Multi-page layout:
- - Home page.
+ -- Home page.
  - About page.
  - Services page.
  - Contact page.
