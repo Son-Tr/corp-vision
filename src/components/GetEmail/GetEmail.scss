@@ -27,6 +27,11 @@
             margin-top: 3rem;
             @include flex(center, center, row);
 
+            //responsive group-input
+            @include responsive-max(415px) {
+                flex-wrap: wrap;
+            }
+
             .icon {
                 color: #999;
                 background-color: rgba(0, 0, 0, 0.25);
@@ -59,6 +64,12 @@
                 border-top-left-radius: 0;
                 border-bottom-left-radius: 0;
                 @include padding(14, 25, 14, 25);
+
+                //responsive group-input
+                @include responsive-max(415px) {
+                    margin-top: 1rem;
+                    border-radius: 8px;
+                }
             }
         }
     }
